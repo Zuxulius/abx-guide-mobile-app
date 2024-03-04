@@ -1,13 +1,18 @@
+import {useState} from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import Checklist from './Checklist';
 import { View, StyleSheet, Text, Pressable} from 'react-native';
 
 function Home() {
+
+    const [modalVisible, setModalVisible] = useState(false);
+
     return (
         <View style={styles.container}>
+            <Checklist modalVisible={modalVisible} setModalVisible={setModalVisible}></Checklist>
             <Header />
-            <Separator />
-            <Text style={styles.h2}>Vanliga samhällsförvärvade infektioner</Text>
+            <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
             <View style={styles.greenButtonDiv}>
                 <Pressable style={styles.greenButton}>
                     <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
@@ -29,7 +34,7 @@ function Home() {
             <Separator />
             <Text style={styles.h2}>Snabbresurser</Text>
             <View style={styles.resourceButtonDiv}>
-                <Pressable style={styles.resourceButton}>
+                <Pressable style={styles.resourceButton} onPress={() => setModalVisible(!modalVisible)}>
                     <Text style={styles.buttonText}>Checklista</Text>
                 </Pressable>
                 <Pressable style={styles.resourceButton}>
