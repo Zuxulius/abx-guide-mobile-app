@@ -2,15 +2,18 @@ import {useState} from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Checklist from './Checklist';
+import Allergy from './Allergy';
 import { View, StyleSheet, Text, Pressable} from 'react-native';
 
 function Home() {
 
-    const [modalVisible, setModalVisible] = useState(false);
+    const [checklistVisible, setChecklistVisible] = useState(false);
+    const [allergyVisible, setAllergyVisible] = useState(false);
 
     return (
         <View style={styles.container}>
-            <Checklist modalVisible={modalVisible} setModalVisible={setModalVisible}></Checklist>
+            <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
+            <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
             <Header />
             <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
             <View style={styles.greenButtonDiv}>
@@ -34,10 +37,10 @@ function Home() {
             <Separator />
             <Text style={styles.h2}>Snabbresurser</Text>
             <View style={styles.resourceButtonDiv}>
-                <Pressable style={styles.resourceButton} onPress={() => setModalVisible(!modalVisible)}>
+                <Pressable style={styles.resourceButton} onPress={() => setChecklistVisible(!checklistVisible)}>
                     <Text style={styles.buttonText}>Checklista</Text>
                 </Pressable>
-                <Pressable style={styles.resourceButton}>
+                <Pressable style={styles.resourceButton} onPress={() => setAllergyVisible(!allergyVisible)}>
                     <Text style={styles.buttonText}>Penicillin-allergi</Text>
                 </Pressable>
                 <Pressable style={styles.resourceButton}>
