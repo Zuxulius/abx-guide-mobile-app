@@ -30,30 +30,29 @@ function Allergy({ allergyVisible, setAllergyVisible }) {
 
 const styles = StyleSheet.create ({
     allergy: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        padding: 10,
         width: '100%',
         height: '100%',
     },
     header: {
-        marginTop: 25,
         flexDirection: 'row',
         justifyContent: 'center',
     },
     closeModalButton: {
-        marginTop: 5,
-        marginBottom: 5,
+        marginTop: 25,
+        marginBottom: 25,
         borderWidth: 3,
-        borderRadius: 30,
+        borderRadius: 100,
         borderColor: 'whitesmoke',
         paddingTop: 5,
         paddingBottom: 5,
-        paddingRight: 20,
-        paddingLeft: 20,
+        paddingRight: 15,
+        paddingLeft: 15,
     },
     closeText: {
         color: 'whitesmoke',
-        fontSize: 36,
+        fontSize: 24,
+        fontFamily: 'sans-serif',
     }
 })
 
