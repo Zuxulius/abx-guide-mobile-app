@@ -1,4 +1,4 @@
-import { View, Dimensions, StyleSheet } from 'react-native';
+import { View, Dimensions, StyleSheet, ScrollView, Text, } from 'react-native';
 import Pdf from 'react-native-pdf';
 
 function PdfViewer() {
@@ -22,7 +22,7 @@ function PdfViewer() {
             >
             </Pdf>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
