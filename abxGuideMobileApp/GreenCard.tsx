@@ -1,8 +1,29 @@
 import { View, StyleSheet, ScrollView, Text, } from 'react-native';
 
-function greenCard() {
+function GreenCard() {
     return (
         <ScrollView style={styles.container}>
+
+            <View style={{marginTop: 50}}>
+                <Text style={{marginLeft: 10}}>
+                    <Text style={{fontWeight: 'bold', fontSize: 18, color: 'green'}}>
+                    Empirisk antibiotikabehandling på akuten av vanliga samhällsförvärvade infektioner 2023
+                    {"\n"}
+                    {"\n"}
+                    </Text>
+                    <Text style={{fontWeight: 'bold'}}>
+                    Läkemedelskommittén Region Östergötland
+                    {"\n"}
+                    www.regionostergotland.se
+                    {"\n"}
+                    {"\n"}
+                    </Text>
+                    <Text>
+                    Rekommendationerna gäller för icke gravida vuxna med normal vikt, njur- och leverfunktion. Dosera baserat på njur- och leverfunktion, vikt, indikation, svårighetsgrad, ålder, mät antibiotikakoncentration vb.
+                    {"\n"}
+                    </Text>
+                </Text>
+            </View>
 
             <View style={styles.header}>
                 <Text style={styles.headerText}>Samhällsförvärvad Urosepsis - Pyelonefrit - nedre afebril UVI</Text>
@@ -263,15 +284,15 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-41, 2, 3, 4, 5
+                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-41, 2, 3, 4, 5
+                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                 {"\n"}{"\n"}
                 +
                 azitromycin 500mgx1 iv alt. erytromycin 1gx3(-4 iv)
                 {"\n"}
                 eller
-                moxifloxacin 400mgx1 iv8 alt. levofloxacin 750 mg x1 iv8
+                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
                 </Text>
             </View>
             </View>
@@ -298,12 +319,12 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-41,2,3,4,5
+                a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5</Text>
                 {"\n"}
-                b. meropenem 1gx3-41,2,3,4,5
+                b. meropenem 1gx3-4<Text style={styles.super}>1,2,3,4,5</Text>
                 {"\n"}
                 +
-                moxifloxacin 400mg x 1 iv8
+                moxifloxacin 400mg x 1 iv<Text style={styles.super}>8</Text>
                 </Text>
             </View>
             </View>
@@ -344,16 +365,16 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-41, 2, 3, 4, 5
+                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-41, 2, 3, 4, 5
+                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                 {"\n"}
                 {"\n"}
                 +
                 {"\n"}
-                moxifloxacin 400mgx1 iv8 alt.
+                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt.
                 {"\n"}
-                levofloxacin 750 mg x1 iv8
+                levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
                 </Text>
             </View>
             </View>
@@ -380,9 +401,9 @@ function greenCard() {
                 {"\n"}
                 b. azitromycin 500mgx1 iv.
                 {"\n"}
-                c. moxifloxacin 400mgx1 iv8.
+                c. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>.
                 {"\n"}
-                d. levofloxacin 750 mg x1 iv8.
+                d. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>.
                 {"\n"}
                 +
                 {"\n"}
@@ -391,9 +412,9 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-41, 2, 3, 4, 5
+                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-41, 2, 3, 4, 5
+                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                 {"\n"}
                 {"\n"}
                 +
@@ -404,9 +425,9 @@ function greenCard() {
                 {"\n"}
                 eller
                 {"\n"}
-                moxifloxacin 400mgx1 iv8 alt.
+                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt.
                 {"\n"}
-                levofloxacin 750 mg x1 iv8
+                levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
                 </Text>
             </View>
             </View>
@@ -420,25 +441,33 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx18
-                b. levofloxacin 750 mg x18
+                a. moxifloxacin 400mgx1<Text style={styles.super}>8</Text>
+                {"\n"}
+                b. levofloxacin 750 mg x1<Text style={styles.super}>8</Text>
+                {"\n"}
                 c. T. azitromycin 500 mgx1
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1 iv8
-                b. levofloxacin 750 mg x1 iv8
+                a. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>
+                {"\n"}
+                b. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                {"\n"}
                 c. azitromycin 500mgx1 iv
+                {"\n"}
                 +
                 bensylpenicillin 3 g x 4
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1 iv8.
-                b. levofloxacin 750 mg x1 iv8
+                a. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>.
+                {"\n"}
+                b. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                {"\n"}
                 c. azitromycin 500mgx1 iv
+                {"\n"}
                 +
                 bensylpenicillin 3 g x 4
                 </Text>
@@ -455,6 +484,7 @@ function greenCard() {
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. T amoxicillin-klavulansyra 875 /125mg x 3
+                {"\n"}
                 b. cefotaxim 2gx3
                 </Text>
             </View>
@@ -465,10 +495,14 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-41, 2, 3, 4, 5
-                b. meropenem 1gx3-41, 2, 3, 4, 5
+                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                {"\n"}
+                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                {"\n"}
                 +
-                moxifloxacin 400mgx1 iv8 alt. levofloxacin 750 mg x1 iv8
+                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt.
+                {"\n"}
+                levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
                 </Text>
             </View>
             </View>
@@ -492,9 +526,15 @@ function greenCard() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a.piperacillin/tazobaktam 4g x 41, 2, 3, 4, 5
-                b.meropenem 1g x 41, 2, 3, 4, 5
-                + ciprofloxacin 400mg x 3 iv8 eller (om cipro-resistens) aminoglykosid3
+                a.piperacillin/tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                {"\n"}
+                b.meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                {"\n"}
+                + ciprofloxacin 400mg x 3 iv<Text style={styles.super}>8</Text>
+                {"\n"}
+                eller
+                {"\n"}
+                (om cipro-resistens) aminoglykosid<Text style={styles.super}>3</Text>
                 </Text>
             </View>
             </View>
@@ -504,42 +544,346 @@ function greenCard() {
             <View style={styles.column}>
                 <Text style={styles.content}>
                 Allvarlig allergi mot betalaktamantibiotika
+                {"\n"}
+                {"\n"}
                 Observera att vid pc-allergi kan i många fall meropenem övervägas - se korsallergitabell
+                {"\n"}
+                {"\n"}
                 Om testdos av meropenem bedöms nödvändigt – ge omgående alternativt preparat och om ingen reaktion på testdos, ge meropenem i behandlingsdos
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. T. doxycyklin 200 mg x 1 i 3 dygn följt av 100 mg x 1
+                {"\n"}
                 b. T. erytromycin (prep./dos se
                 FASS)
+                {"\n"}
                 c. T. azitromycin 500 mgx1
-                d. T. moxifloxacin 400 mgx18
+                {"\n"}
+                d. T. moxifloxacin 400 mgx1<Text style={styles.super}>8</Text>
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1 iv8 b. levofloxacin 750 mg x1 iv8 c. azitromycin 500mgx1 iv
+                a. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>
+                {"\n"}
+                b. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                {"\n"}
+                c. azitromycin 500mgx1 iv
+                {"\n"}
                 +
-                inf klindamycin 600 mgx37 iv
-                                </Text>
+                {"\n"}
+                inf klindamycin 600 mgx3<Text style={styles.super}>7</Text> iv
+                </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                klindamycin 600-(900)mg x 32, 3, 4, 5, 7 + moxifloxacin 400mg x 1 iv8 alt. levofloxacin 750mg x 1 iv8 (samhällsförvärvad)
-                d. klindamycin 600-(900)mg x 3 2, 3, 4, 5, 7 + ciprofloxacin 400mg x 3 iv8
-                +/- aminoglykosid3 (sjukhusförvärvad/misstanke om P. aeruginosa)
+                klindamycin 600-(900)mg x 3<Text style={styles.super}>2, 3, 4, 5, 7</Text>
+                {"\n"}
+                + moxifloxacin 400mg x 1 iv<Text style={styles.super}>8</Text> alt.
+                {"\n"}
+                levofloxacin 750mg x 1 iv<Text style={styles.super}>8</Text> (samhällsförvärvad)
+                {"\n"}
+                {"\n"}
+                d. klindamycin 600-(900)mg x 3 <Text style={styles.super}>2, 3, 4, 5, 7</Text>
+                {"\n"}
+                + ciprofloxacin 400mg x 3 iv<Text style={styles.super}>8</Text>
+                {"\n"}
+                +/- aminoglykosid<Text style={styles.super}>3</Text> (sjukhusförvärvad/misstanke om P. aeruginosa)
                 </Text>
             </View>
+            </View>
+
+            <View>
+                <Text style={styles.footnotes}>
+                <Text style={{fontWeight: 'bold'}}>Att tänka på!</Text>
+                {"\n"}
+                {'\u25CF'} Mycoplasma, vid epidemier: makrolid alt. doxycyklin inkl. vid smitta av mykoplasma i Sydostasien.
+                {"\n"}
+                {'\u25CF'} Ornitos ( Chlamidophila psittaci) doxycyklin 200 mg x 1.
+                {"\n"}
+                {'\u25CF'} Kinoloner<Text style={styles.super}>8</Text>: moxifloxacin/levofloxacin/ciprofloxacin observera ej vid
+                {"\n"}
+                aortaaneurysm, övriga kontraindikationer - se FASS
+                {"\n"}
+                {'\u25CF'} Legionella: utlandsresa, immunsuppression, kronisk lungsjukdom
+                {"\n"}
+                {'\u25CF'} Pseudomonas aeruginosa vid allvarlig underliggande lungsjukdom/ immunsuppression
+                {"\n"}
+                {'\u25CF'} Pneumocystis jirovecii och aspergillus hos immunsupprimerade
+                {"\n"}
+                {'\u25CF'} Influensa: Tamiflu 75 mg x2
+                {"\n"}
+                {'\u25CF'} Covid: antiviral beh. till högrisk
+                {"\n"}
+                {'\u25CF'} Kortison (infektionskonsult): covid, pneumocystis, mycoplasma (IVA-
+                krävande) och ev övriga agens vid svår sjukdom
+                </Text>
             </View>
 
             {/* Third part */}
             {/* Third part */}
             {/* Third part */}
+
             <View style={styles.header}>
                 <Text style={styles.headerText}>Övriga samhällsförvärvade bakteriella infektioner Erysipelas, hud- och mjukdelsinfektion, bukinfektion och infektion med oklart fokus</Text>
             </View>
 
+            {/* Row titles */}
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Diagnos</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Förstahandsval</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Alternativ</Text>
+                    </View>
+                </View>
+            </View>
+
+            {/* Row 1 */}
+
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    <Text style={{fontWeight: 'bold'}}>Erysipelas (Betahemolyserande streptokocker, grupp A,B,C, G)</Text>
+                    {"\n"}
+                    {"\n"}
+                    Ansiktsros - som regel inläggning med intravenös behandling
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        a. bensyl-pc 3g x 3-4
+                        {"\n"}
+                        b. T. penicillin V 1g x 3(-4)
+                        {"\n"}
+                        {"\n"}
+                        Vid misstanke om blandinfektion med streptokocker och Staphylococcus aureus:
+                        {"\n"}
+                        {"\n"}
+                        c. T pcV 1gx3 + flukloxacillin 1gx3-4<Text style={styles.super}>4</Text>
+                        {"\n"}
+                        d. cefotaxim 2gx3-4<Text style={styles.super}>4</Text> alt cefuroxim
+                        1,5gx3<Text style={styles.super}>4</Text>
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        inf. klindamycin 600mg x 3 iv.<Text style={styles.super}>4,7</Text>
+                        {"\n"}
+                        K. klindamycin 300mg x 3<Text style={styles.super}>4,7</Text>
+                        {"\n"}
+                        {"\n"}
+                        Streptokocker grupp A och B > 10% klindamycinresistens hos invasiva isolat (Swedres 2021)
+                    </Text>
+                </View>
+            </View>
+
+            {/* Row titles */}
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Diagnos</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Förstahandsval</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Alternativ</Text>
+                    </View>
+                </View>
+            </View>
+
+            {/* Row 2 */}
+
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    <Text style={{fontWeight: 'bold'}}>Hud- och mjukdelsinfektion (Staphylococcus aureus)</Text>
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        a. inf. kloxacillin 2g x 4 iv.<Text style={styles.super}>4</Text>
+                        {"\n"}
+                        b. T. flukloxacillin 1 g x 4<Text style={styles.super}>4</Text>
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        a. inf. klindamycin 600mg x 3 iv.<Text style={styles.super}>4, 7</Text>
+                        {"\n"}
+                        b. K. klindamycin 300mg x 3<Text style={styles.super}>4, 7</Text>
+                        {"\n"}
+                        c. cefotaxim 2gx3-4<Text style={styles.super}>4</Text> alt cefuroxim 1,5gx3<Text style={styles.super}>4</Text>
+                    </Text>
+                </View>
+            </View>
+
+            {/* Row titles */}
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Diagnos</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Förstahandsval</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Alternativ</Text>
+                    </View>
+                </View>
+            </View>
+
+            {/* Row 3 */}
+
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super}>1, 2, 3, 4, 5, 6, 7</Text></Text>
+                    {"\n"}
+                    {"\n"}
+                    Tidig Source control - dränera abscess
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande infektion - se ”rött kort”
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        a. piperacillin-tazobaktam 4g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        {"\n"}
+                        {"\n"}
+                        + metronidazol 500mg x 3 iv<Text style={styles.super}>7</Text>
+                        {"\n"}
+                        {"\n"}
+                        c. meropenem 1g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        {"\n"}
+                        {"\n"}
+                        d. imipenem 1g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        {"\n"}
+                        {"\n"}
+                        +
+                        {"\n"}
+                        {"\n"}
+                        echinocandin<Text style={styles.super}>6,7</Text> (vid misstanke om invasiv candida)
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        Allvarlig allergi mot betalaktamantibiotika - se röda kortet och kontakta infektionsbakjour.
+                        {"\n"}
+                        Observera att vid pc-allergi kan i många fall meropenem övervägas - se korsallergitabell sid 5
+                        {"\n"}
+                        Om livshotande infektion och testdos av meropenem bedöms nödvändigt - ge omgående alternativt preparat och om ingen reaktion på testdos, ge meropenem i behandlingsdos.
+                    </Text>
+                </View>
+            </View>
+
+            {/* Row titles */}
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Diagnos</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Förstahandsval</Text>
+                    </View>
+                </View>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Alternativ</Text>
+                    </View>
+                </View>
+            </View>
+
+            {/* Row 4 */}
+
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    <Text style={{fontWeight: 'bold'}}>Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super}>1, 2, 3, 4, 5</Text></Text>
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                        a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5,</Text>
+                        {"\n"}
+                        +/- metronidazol 500mg x 3 iv<Text style={styles.super}>7</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1,2,3,4,5</Text>
+                        {"\n"}
+                        {"\n"}
+                        c. meropenem 1g x 3-4<Text style={styles.super}>1,2,3,4,5</Text>
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    Allvarlig allergi mot betalaktamantibiotika - se röda kortet och kontakta infektionsbakjour.
+                    {"\n"}
+                    Observera att vid pc-allergi kan i många fall meropenem övervägas - se korsallergitabell sid 5
+                    {"\n"}
+                    Om livshotande infektion och testdos av meropenem bedöms nödvändigt - ge omgående alternativt preparat och om ingen reaktion på testdos, ge meropenem i behandlingsdos.
+                    </Text>
+                </View>
+            </View>
+
+            <View>
+                <Text style={styles.footnotes}>
+                    <Text style={{fontWeight: 'bold', fontSize: 16}}>Fotnötter - pneumoni, erysipelas, hud- och mjukdelsinfektion, bukinfektion och infektion med oklart fokus</Text>
+                    {"\n"}
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>1. Betalaktamantibiotika:</Text> Vid septisk chock skall, på grund av ökad distributionsvolym, alltid ökad antibiotikaexponering eftersträvas: ge höga och täta doser (minst var 6:e timma). Ge dessutom en extra laddningsdos efter 3 timmar (dos 2). Observera att behov av höga täta doser oftast gäller även vid kontinuerlig hemodialys/filtration. Ökad exponering kan också uppnås genom förlängd infusion (3-4 tim) eller kontinuerlig infusion. Monitore- ra betalaktamkoncentration.</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>2. Vankomycin:</Text> Tilläggsbehandling med vankomycin vid misstanke om MRSA eller misstanke om vårdrelaterad KNS infektion. Ge laddningsdos härefter intermittent dosering alt. kontinuerlig infusion enl. ssk PM. Monitorera vankomycinkoncentration. Vid nedsatt njurfunktion, kontakta infek- tionsläkare.</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>3. Aminoglykosid:</Text> Tilläggsbehandling med aminoglykosid kan övervägas vid sepsis och septisk chock om infektionen misstänks orsakas av gram- negativa bakterier (fr.a. vid urinvägsfokus) och inte kontraindikationer föreligger. Amikacin ges i laddningsdos 25-30 mg/kg, tobramycin laddningsdos 6-7 mg/kg. De högre doserna vid septisk chock, men kan ändå ge ottillräcklig effekt varför aminoglykosider ej skall ges som spektrumvidgning dvs monoterapi utanför urinvägarna. Vid BMI {">"} 30 ges lägre dos/kg kroppsvikt enligt formeln ”adjusted body weight” ABW=IBW+0,4x (TBW-IBW). Ta serum- koncentration 8 och 24 tim efter given dos, som underlag för ev fortsatt behandling med aminoglykosid, som bör ske i samråd med infektionsbakjour. Amikacin rekommenderas vid misstanke om ESBL-producerande Enterobacteriales och tobramycin vid pseudomonasinfektioner.</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>Kontraindikationer till aminoglykosider:</Text> kronisk njurfunktionsnedsättning, andra nefrotoxiska droger, akut anuri, känd hörselnedsättning eller hereditet för hörselnedsättning; undvik aminoglykosid i dessa fall och ge betalaktamantibiotika med bredast möjliga spektrum (t.ex. meropenem).</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>4. Misstanke om resistenta bakterier:</Text> ESBL: meropenem. MRSA/MRSE: tillägg av vankomycin alt. linezolid. MDR Pseudomonas/Acinetobacter: kontakta infektionsbakjour.</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>5. Dosering vid nedsatt njurfunktion:</Text> Vid allvarliga infektioner: Ge laddningsdos av betalaktamantibiotika som vid normal njurfunktion, kon- takta infektionsbakjour för fortsatt dosregim, undvik underbehandling, monitorera betalaktam-koncentration. Följ nationellt kunskapsunderlag: https://www.sls.se/raf/ - Dosering vid dialys. Undvik: aminoglykosid, imipenem/cilastatin (pga ackumulering av cilastatin).</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>6. Echinocandin</Text> (ska övervägas vid riskfaktorer för invasiv candida; caspofungin 70 mg laddningsdos därefter 70 mg ({">"}80 kg) eller 50 mg ({"<"} 80 kg) dagl. eller anidulafungin 200 mg laddningsdos därefter 100 mg dagl.</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>7. Patient med allvarlig leverfunktionsnedsättning:</Text> dosreduktion av klindamycin, metronidazol, tigecyklin samt ev caspofungin och rifampicin.Samråd med infektionsbakjour.</Text>
+                    {"\n"}
+                    <Text><Text style={{fontWeight: 'bold'}}>8. Kinoloner (ciprofloxacin, levofloxacin, moxifloxacin)</Text> undvik om möjligt användning vid risk för aortaaneurysm/dissektion och/eller sjukdomstill- stånd med ökad risk för att utveckla hjärtklaffinsufficiens. Se även FASS.</Text>
+                </Text>
+            </View>
     </ScrollView>
   );
 }
@@ -612,4 +956,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default greenCard;
+export default GreenCard;
