@@ -51,28 +51,59 @@ function RedCard() {
                         <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad</Text></Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>a. cefotaxim 2g x 3-41, 2, 3, 4, 5
-+/- metronidazol 500mg x 38
-b. piperacillin-tazobaktam 4g x 41, 2, 3, 4, 5
-c. meropenem 1g x 3-41, 2, 3, 4, 5</Text>
+                        <Text style={styles.content}>a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        +/- metronidazol 500mg x 38
+                        {"\n"}
+                        {"\n"}
+                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>a. cefotaxim 2g x 3-41, 2, 3, 4, 5 b. meropenem 1gx3-41, 2, 3, 4, 5
-+
-azitromycin 500mgx1 alt. erytromycin 1gx3-(4)
-eller
-moxifloxacin 400mgx19 alt. levofloxacin 750 mg x19</Text>
+                        <Text style={styles.content}>
+                        a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        +
+                        {"\n"}
+                        {"\n"}
+                        azitromycin 500mgx1 alt. erytromycin 1gx3-(4)
+                        {"\n"}
+                        {"\n"}
+                        eller
+                        {"\n"}
+                        {"\n"}
+                        moxifloxacin 400mgx1<Text style={styles.super}>9</Text> alt. levofloxacin 750 mg x1<Text style={styles.super}>9</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>a. piperacillin-tazobaktam 4g x 41, 2, 3, 4, 5, 6
-b. cefotaxim 2g x 3-41, 2, 3, 4, 5, 6 + metronidazol 500mg x 38
-c. meropenem 1g x 3-41, 2, 3, 4, 5, 6 alt. imipenem 1g x 3-41, 2, 3, 4, 5, 6</Text>
+                        <Text style={styles.content}>
+                        a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> + metronidazol 500mg x 3<Text style={styles.super}>8</Text>
+                        {"\n"}
+                        {"\n"}
+                        c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> alt. imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>a. cefotaxim 3g x 41, 2, 4, 5, 7 + ampicillin 3g x 4
-b. meropenem 2g x 31, 2, 4, 5, 7 Vid misstanke om infektion med pneumokocker med nedsatt känslighet för penicillin, t.ex. vid infektion förvärvad utomlands
-ge tillägg med något
-av följande tre alt: (i) vankomycin2 +/-rifampicin8, (ii) linezolid eller (iii) moxifloxacin9</Text>
+                        <Text style={styles.content}>
+                        a. cefotaxim 3g x 4<Text style={styles.super}>1, 2, 4, 5, 7</Text> + ampicillin 3g x 4
+                        {"\n"}
+                        {"\n"}
+                        b. meropenem 2g x 3<Text style={styles.super}>1, 2, 4, 5, 7</Text>
+                        {"\n"}
+                        Vid misstanke om infektion med pneumokocker med nedsatt känslighet för penicillin, t.ex. vid infektion förvärvad utomlands
+                        ge tillägg med något
+                        av följande tre alt: (i) vankomycin<Text style={styles.super}>2</Text> +/-rifampicin<Text style={styles.super}>8</Text>, (ii) linezolid eller (iii) moxifloxacin<Text style={styles.super}>9</Text>
+                        </Text>
                     </View>
             </View>
             <View style={styles.row}>
@@ -80,67 +111,239 @@ av följande tre alt: (i) vankomycin2 +/-rifampicin8, (ii) linezolid eller (iii)
                         <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Sjukhusförvärvad</Text>{"\n"}(={">"}48 tim efter ankomst till sjukhus)</Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        +
+                        {"\n"}
+                        {"\n"}
+                        ciprofloxacin 400mg x 2-3<Text style={styles.super}>9</Text> alt.
+                        {"\n"}
+                        (om cipro-resistens) aminoglykosid<Text style={styles.super}>3, 5</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> alt.
+                        {"\n"}
+                        imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        + echinocandin<Text style={styles.super}>6, 8</Text> (misstanke om invasiv candida)
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        meropenem 2g x 3<Text style={styles.super}>1, 5</Text>
+                        {"\n"}
+                        + vankomycin<Text style={styles.super}>2</Text> alt linezolid 600 mg x 2
+                        {"\n"}
+                        {"\n"}
+                        Ovanstående avser postoperativ och posttraumatisk meningit
+                        </Text>
                     </View>
             </View>
             <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</Text>
+                        <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Neutropeni</Text> {"\n"}(neutrofila {"< 0,5"})</Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2,3,4,5,6</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        c. ceftazidim 2g x 3<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        + klindamycin 600-(900)mg x 3<Text style={styles.super}>8</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a.piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        b.meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}
+                        +
+                        {"\n"}
+                        ciprofloxacin 400 mg x 3<Text style={styles.super}>9</Text> (P. aeruginosa, Legionella spp, men ej mykoplasma) eller moxifloxacin 400mgx1<Text style={styles.super}>9</Text> alt.
+                        {"\n"}
+                        levofloxacin 750 mgx1<Text style={styles.super}>9</Text> (Legionella spp, mykoplasma men ej P. aeruginosa)
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a. meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> alt. imipenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
+                        {"\n"}
+                        {"\n"}
+                        + echinocandin<Text style={styles.super}>6, 8</Text> (misstanke om invasiv candida)
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        meropenem 2g x 3<Text style={styles.super}>1, 2, 4, 5, 7</Text>
+                        </Text>
                     </View>
             </View>
             <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</Text>
+                        <Text style={styles.content}>
+                            <Text style={{fontWeight: 'bold'}}>Allvarlig allergi mot betalaktamantibiotika</Text>{"\n"}
+                            Observera att vid pc-allergi
+                            kan i många fall meropenem övervägas - se korsallergitabell
+                            Om testdos av meropenem bedöms nödvändigt – ge omgående alternativt preparat och om ingen reaktion på testdos, ge meropenem i behandlingsdos.
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        klindamycin 600-(900)mg x 3 <Text style={styles.super}>2, 3, 4, 5, 6, 8</Text>
+                        {"\n"}
+                        + ciprofloxacin 400mg x 2-3<Text style={styles.super}>9</Text>
+                        {"\n"}
+                        + aminoglykosid<Text style={styles.super}>3, 5</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        a. klindamycin 600-(900)mg x 3<Text style={styles.super}>2, 3, 4, 5, 8</Text>
+                        {"\n"}
+                        + moxifloxacin 400mg x 1<Text style={styles.super}>9</Text>
+                        {"\n"}
+                        alt. levofloxacin 750mg x 1<Text style={styles.super}>9</Text> (samhällsförvärvad)
+                        {"\n"}
+                        {"\n"}
+                        b. klindamycin 600-(900)mg x 3 <Text style={styles.super}>2, 3, 4, 5, 8</Text>
+                        {"\n"}
+                        + ciprofloxacin 400mg x 3<Text style={styles.super}>9</Text>
+                        {"\n"}
+                        +/- aminoglykosid<Text style={styles.super}>3</Text> (sjukhusförvärvad/ misstanke om P. aeruginosa)
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        klindamycin 600-(900)mg x 3<Text style={styles.super}>2, 3, 4, 5, 6, 8</Text>
+                        {"\n"}
+                        + ciprofloxacin 400mg x 2-3<Text style={styles.super}>9</Text>
+                        {"\n"}
+                        +/- aminoglykosid<Text style={styles.super}>3</Text> alt.
+                        {"\n"}
+                        +/- tigecyklin<Text style={styles.super}>8</Text> 100 mg i laddn.dos följt av 50 mgx2 (infektionskonsult)
+                        {"\n"}
+                        {"\n"}
+                        +
+                        {"\n"}
+                        echinocandin<Text style={styles.super}>6, 8</Text> (vid misstanke om invasiv candida)
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        moxifloxacin 400mg x 1<Text style={styles.super}>9</Text>
+                        {"\n"}
+                        {"\n"}
+                        + vankomycin<Text style={styles.super}>2</Text>
+                        {"\n"}
+                        {"\n"}
+                        +/-
+                        {"\n"}
+                        TMP/SMX 5mg/kg x 3, max 30 ml x3 (för listeriatäckning)
+                        {"\n"}
+                        {"\n"}
+                        Observera att i flertalet fall med anamnes på pc-allergi kan meropenem ges (se tabell korsallergi).
+                        </Text>
                     </View>
             </View>
             <View style={[styles.row, {backgroundColor: '#FF8080'}]}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</Text>
+                        <Text style={styles.content}>
+                            <Text style={{fontWeight: 'bold'}}>TÄNK PÅ</Text>
+                            {"\n"}
+                            Konsultera Infektionskonsult/bakjour vid allvarliga och komplicerade infektioner
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        {'\u25CF'} <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text>
+                        {"\n"}
+                        a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5 ,</Text>
+                        {"\n"}
+                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        d. imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Nekrotiserande hud- och mjukdels- infektion (myosit/fasciit):</Text> meropenem 1g
+                        x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                        {"\n"}
+                        + klindamycin 600-(900)mg x 3<Text style={styles.super}>8</Text>
+                        {"\n"}
+                        + ev.i.v immunglobulin
+                        {"\n"}
+                        {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Endokardit</Text> hos patient med klaffsjukdom eller blåsljud
+                        {"\n"}
+                        {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Malaria</Text> Afrika/Asien/Sydamerika
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        {'\u25CF'} Legionella: utlandsresa, immunsuppression, kronisk lungsjukdom
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Pneumocystis (P. jirovecii) och aspergillus hos immunsupprimerade
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Kombinationsbehandling högdosbetalaktam<Text style={styles.super}>1</Text> och ev. ciprofloxacin (400 mg x 3<Text style={styles.super}>9</Text>) vid misstanke om pseudomonas
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Tuberkulos hos äldre, immigranter, etyliker, immunsupprimerade, långdraget förlopp
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Influensa: Tamiflu 75mg x 2 p.o.
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Covid: antiviral behandling
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Kortison (infektionskonsult): covid, pneumocystis, mycoplasma (IVAkrävande) och ev övriga agens vid svår sjukdom
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        {'\u25CF'} Tidig Source control: dränera abscess
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Invasiv candida: långvarig IVA-vård, neutropeni, tarmperforation, kontinuerlig eller intermittent dialys,
+                        caspofungin<Text style={styles.super}>6, 8</Text> eller anidulafungin<Text style={styles.super}>6</Text>
+                        </Text>
                     </View>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>Lorem Ipsum</Text>
+                        <Text style={styles.content}>
+                        {'\u25CF'} Tbc-meningit hos immigranter, immunsupprimerade och ovaccinerade
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Svampmeningit hos immunsupprimerade
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Herpesencephalit: förvirring. fokalsymtom, virusgenes (aciklovir 10mg/kg x 3)<Text style={styles.super}>7</Text>
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Steroider vid samhällsförv. ABM (betametason 8mg x 4)
+                        {"\n"}
+                        {"\n"}{'\u25CF'} Antibiotikabehandling utan fördröjning - ej datortomografi före första antibiotikadosen
+                        </Text>
                     </View>
             </View>
 
