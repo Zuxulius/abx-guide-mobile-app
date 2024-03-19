@@ -8,6 +8,7 @@ import Pdf from 'react-native-pdf';
 import Navbar from './Navbar.tsx';
 import Menu from './Menu.tsx';
 import Checklist from './Checklist.tsx';
+import RedCard2 from './RedCard2.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,7 +31,7 @@ function App() {
             />
             <Stack.Screen
               name="RedCard"
-              component={RedCard}
+              component={RedCard2}
             />
             <Stack.Screen
               name="PdfViewer"

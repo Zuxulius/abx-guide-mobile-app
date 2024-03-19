@@ -9,7 +9,6 @@ import Navbar from './Navbar';
 
 function Menu({ menuVisible, setMenuVisible }) {
 
-
     const [checklistVisible, setChecklistVisible] = useState(false);
     const [allergyVisible, setAllergyVisible] = useState(false);
     const navigation = useNavigation();
@@ -47,7 +46,7 @@ function Menu({ menuVisible, setMenuVisible }) {
                         <View style={styles.redButtonDiv}>
                             <Pressable
                             style={styles.redButton}
-                            onPress={() => navigation.navigate('PdfViewer')}
+                            onPress={() => navigation.navigate('RedCard')}
                             >
                                 <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
                             </Pressable>

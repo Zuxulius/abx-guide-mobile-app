@@ -24,7 +24,7 @@ function RedCard() {
             <View style={styles.row}>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                    <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> (mål: insatt inom 1 timma) – dosering vid normal vikt och njurfunktion, icke gravida.
+                    <Text style={{fontWeight: 'bold'}}>Initial intravenös antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
                     </Text>
                 </View>
             </View>
@@ -457,6 +457,7 @@ const styles = StyleSheet.create({
     },
     footnotes: {
       padding: 10,
+      marginBottom: 50,
     },
     footnote: {
       fontSize: 12, // Example footnote text size
