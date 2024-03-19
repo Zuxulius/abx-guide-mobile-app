@@ -18,6 +18,7 @@ function Menu({ menuVisible, setMenuVisible }) {
         <>
             <Modal
             style={{margin: 0}}
+            backdropOpacity={0.4}
             animationIn={'slideInLeft'}
             animationOut={'slideOutLeft'}
             isVisible={menuVisible}
@@ -26,18 +27,8 @@ function Menu({ menuVisible, setMenuVisible }) {
                 setMenuVisible(false);
             }}>
                 <View style={styles.menu}>
-                    <LinearGradient
-                    colors={['rgba(0, 102, 255, 1)', 'rgba(36, 0, 255, 0.51)']}
-                    style={styles.header}
-                    start={{ x: 0, y: 0 }}
-                    end={{ x: 0, y: 1 }}
-                    >
-                        <Pressable style={styles.closeModalButton} onPress={() => setMenuVisible(false)}>
-                            <Text style={styles.closeText}>X</Text>
-                        </Pressable>
-                    </LinearGradient>
                     <View style={styles.menuItems}>
-                        <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
+                        <Text style={[styles.h2, {marginTop: 30}]}>Vanliga samhällsförvärvade infektioner</Text>
                         <View style={styles.greenButtonDiv}>
                             <Pressable
                             style={styles.greenButton}
@@ -90,12 +81,13 @@ const styles = StyleSheet.create ({
         width: '40%',
         height: '100%',
         position: 'absolute',
-
     },
     menuItems: {
+        display: 'flex',
+        justifyContent: 'flex-start',
         borderWidth: 1,
         height: '100%',
-        backgroundColor: 'white',
+        backgroundColor: 'whitesmoke',
     },
     header: {
         flexDirection: 'row',
@@ -147,7 +139,7 @@ const styles = StyleSheet.create ({
     marginTop: 10,
     },
     greenButton: {
-        flexBasis: '80%',
+        flexBasis: '90%',
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: '#DCEAFF',
@@ -157,7 +149,7 @@ const styles = StyleSheet.create ({
         borderColor: 'lightblue',
       },
       redButton: {
-        flexBasis: '80%',
+        flexBasis: '90%',
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: '#DCEAFF',
@@ -167,7 +159,7 @@ const styles = StyleSheet.create ({
         borderColor: 'hsla(0, 100%, 50%, 0.2)',
       },
     resourceButton: {
-        flexBasis: '80%',
+        flexBasis: '95%',
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: 'hsla(241, 100%, 50%, 0.1)',
