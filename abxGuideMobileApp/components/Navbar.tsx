@@ -4,6 +4,7 @@ import Menu from "./Menu";
 import { useState } from "react";
 import Checklist from "./Checklist";
 import Allergy from './Allergy';
+import LinearGradient from 'react-native-linear-gradient';
 
 function Navbar() {
 
@@ -13,23 +14,28 @@ function Navbar() {
     const [allergyVisible, setAllergyVisible] = useState(false);
 
     return (
-        <View style={styles.floatingNavbar}>
-            <TouchableOpacity
-            style={styles.navItems}
-            onPress={() => navigation.navigate('Home')}
-            >
-            <Text style={styles.navText}>Home</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-            style={styles.navItems}
-            onPress={() => setMenuVisible(!menuVisible) }
-            >
-                <Text style={styles.navText}>Menu</Text>
-            </TouchableOpacity>
-            <Menu menuVisible={menuVisible} setMenuVisible={setMenuVisible}></Menu>
-            <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
-            <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
-        </View>
+        <LinearGradient
+        colors={['rgba(0, 102, 255, 1)', 'rgba(36, 0, 255, 0.51)']}
+        style={styles.floatingNavbar}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 0, y: 1 }}
+        >
+                <TouchableOpacity
+                style={styles.navItems}
+                onPress={() => navigation.navigate('Home')}
+                >
+                <Text style={styles.navText}>Home</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                style={styles.navItems}
+                onPress={() => setMenuVisible(!menuVisible) }
+                >
+                    <Text style={styles.navText}>Menu</Text>
+                </TouchableOpacity>
+                <Menu menuVisible={menuVisible} setMenuVisible={setMenuVisible}></Menu>
+                <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
+                <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
+        </LinearGradient>
     )
 }
 
@@ -48,7 +54,8 @@ const styles = StyleSheet.create({
         width: '50%',
     },
     navText: {
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'whitesmoke'
     }
 })
 
