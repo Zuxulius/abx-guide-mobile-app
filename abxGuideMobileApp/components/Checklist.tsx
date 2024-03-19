@@ -25,6 +25,8 @@ function Checklist({ checklistVisible, setChecklistVisible }) {
             <ScrollView
             style={styles.checklist}
             >
+                <Text style={{fontSize: 24, fontWeight: 'bold'}}>Checklista vid insättande av antibiotika
+                {"\n"}</Text>
                 <Text style={styles.item}><Text style={styles.bold}>1. Vid misstanke om livshotande infektion: konsultera infektionsbakjour och narkosläkare</Text></Text>
                 <Text style={styles.item}>
                     <Text style={styles.bold}>2. Ställ preliminär diagnos</Text>
@@ -63,6 +65,7 @@ function Checklist({ checklistVisible, setChecklistVisible }) {
 
 const styles = StyleSheet.create ({
     checklist: {
+        zIndex: 1001,
         padding: 10,
         width: '100%',
         height: '100%',

@@ -31,7 +31,6 @@ function GreenCard() {
 
             {/* Row 1 */}
             <View style={styles.row}>
-
             <View style={styles.column}>
                 <View style={styles.rowHead}>
                     <Text style={styles.title}>Diagnos</Text>
@@ -950,6 +949,7 @@ const styles = StyleSheet.create({
     },
     footnotes: {
       padding: 10,
+      marginBottom: 50,
     },
     footnote: {
       fontSize: 12, // Example footnote text size

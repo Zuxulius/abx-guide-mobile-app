@@ -5,7 +5,7 @@ function PdfViewer() {
     return (
         <View style={styles.container}>
             <Pdf
-            source={require('./assets/greenCard.pdf')}
+            source={require('../assets/redCard.pdf')}
             horizontal={true}
             trustAllCerts={false} // Needed for android error
             onLoadComplete={(numberOfPages,filePath) => {

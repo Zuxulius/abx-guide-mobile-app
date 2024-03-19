@@ -1,0 +1,199 @@
+import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
+import Modal from "react-native-modal";
+import { useState } from 'react';
+import LinearGradient from 'react-native-linear-gradient';
+import Checklist from './Checklist';
+import Allergy from './Allergy';
+import { useNavigation } from '@react-navigation/native';
+import Navbar from './Navbar';
+
+function Menu({ menuVisible, setMenuVisible }) {
+
+
+    const [checklistVisible, setChecklistVisible] = useState(false);
+    const [allergyVisible, setAllergyVisible] = useState(false);
+    const navigation = useNavigation();
+
+    return (
+        <>
+            <Modal
+            style={{margin: 0}}
+            animationIn={'slideInLeft'}
+            animationOut={'slideOutLeft'}
+            isVisible={menuVisible}
+            onBackdropPress={() => setMenuVisible(false)}
+            onRequestClose={() => {
+                setMenuVisible(false);
+            }}>
+                <View style={styles.menu}>
+                    <LinearGradient
+                    colors={['rgba(0, 102, 255, 1)', 'rgba(36, 0, 255, 0.51)']}
+                    style={styles.header}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 0, y: 1 }}
+                    >
+                        <Pressable style={styles.closeModalButton} onPress={() => setMenuVisible(false)}>
+                            <Text style={styles.closeText}>X</Text>
+                        </Pressable>
+                    </LinearGradient>
+                    <View style={styles.menuItems}>
+                        <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
+                        <View style={styles.greenButtonDiv}>
+                            <Pressable
+                            style={styles.greenButton}
+                            onPress={() => navigation.navigate('GreenCard')}
+                            >
+                                <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
+                            </Pressable>
+                            <Pressable style={styles.greenButton}>
+                                <Text style={styles.buttonText}>Pneumoni</Text>
+                            </Pressable>
+                            <Pressable style={styles.greenButton}>
+                                <Text style={styles.buttonText}>Övriga</Text>
+                            </Pressable>
+                        </View>
+                        <Text style={styles.h2}>Intensivvårdskrävande infektioner</Text>
+                        <View style={styles.redButtonDiv}>
+                            <Pressable
+                            style={styles.redButton}
+                            onPress={() => navigation.navigate('PdfViewer')}
+                            >
+                                <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
+                            </Pressable>
+                        </View>
+                        <Text style={styles.h2}>Snabbresurser</Text>
+                        <View style={styles.resourceButtonDiv}>
+                            <Pressable style={styles.resourceButton} onPress={() => setChecklistVisible(!checklistVisible)}>
+                                <Text style={styles.buttonText}>Checklista</Text>
+                            </Pressable>
+                            <Pressable style={styles.resourceButton} onPress={() => setAllergyVisible(!allergyVisible)}>
+                                <Text style={styles.buttonText}>Penicillin-allergi</Text>
+                            </Pressable>
+                            <Pressable style={styles.resourceButton}>
+                                <Text style={styles.buttonText}>Kontakt</Text>
+                            </Pressable>
+                            <Pressable style={styles.resourceButton}>
+                                <Text style={styles.buttonText}>Källor och länkar</Text>
+                            </Pressable>
+                        </View>
+                        </View>
+                </View>
+                <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
+                <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
+            </Modal>
+        </>
+    )
+}
+
+const styles = StyleSheet.create ({
+    menu: {
+        width: '40%',
+        height: '100%',
+        position: 'absolute',
+
+    },
+    menuItems: {
+        borderWidth: 1,
+        height: '100%',
+        backgroundColor: 'white',
+    },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    closeModalButton: {
+        marginTop: 25,
+        marginBottom: 25,
+        borderWidth: 3,
+        borderRadius: 100,
+        borderColor: 'whitesmoke',
+        paddingTop: 5,
+        paddingBottom: 5,
+        paddingRight: 15,
+        paddingLeft: 15,
+    },
+    closeText: {
+        color: 'whitesmoke',
+        fontSize: 24,
+        fontFamily: 'sans-serif',
+    },
+    item: {
+        fontSize: 18,
+        marginTop: 5,
+        marginBottom: 5,
+    },
+    bold: {
+        fontWeight: 'bold',
+    },
+    h2: {
+        color: '#1F4D83',
+        fontSize: 14,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginTop: 10,
+    },
+    greenButtonDiv: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 10,
+    marginTop: 10,
+    },
+    redButtonDiv: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 10,
+    marginTop: 10,
+    },
+    greenButton: {
+        flexBasis: '80%',
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundColor: '#DCEAFF',
+        padding: 5,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'lightblue',
+      },
+      redButton: {
+        flexBasis: '80%',
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundColor: '#DCEAFF',
+        padding: 5,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'hsla(0, 100%, 50%, 0.2)',
+      },
+    resourceButton: {
+        flexBasis: '80%',
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundColor: 'hsla(241, 100%, 50%, 0.1)',
+        padding: 5,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 30,
+        borderBottomLeftRadius: 0,
+        borderWidth: 1,
+        borderColor: 'hsla(241, 100%, 50%, 0.2)',
+      },
+      resourceButtonDiv: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: 10,
+        marginTop: 10,
+      },
+      buttonText: {
+        fontFamily: 'Arial, Helvetica, sans-serif',
+        textAlign: 'center',
+        borderColor: 'red',
+        color: '#1F4D83',
+        fontWeight: 'bold',
+        fontSize: 12,
+      }
+})
+
+export default Menu;

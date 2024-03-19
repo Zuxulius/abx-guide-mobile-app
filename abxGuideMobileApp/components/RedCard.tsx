@@ -275,77 +275,77 @@ function RedCard() {
                         </Text>
                     </View>
             </View>
-            <View style={[styles.row, {backgroundColor: '#FF8080'}]}>
-                    <View style={styles.column}>
-                        <Text style={styles.content}>
-                            <Text style={{fontWeight: 'bold'}}>TÄNK PÅ</Text>
+                <View style={[styles.row, {backgroundColor: '#FF8080'}]}>
+                        <View style={styles.column}>
+                            <Text style={styles.content}>
+                                <Text style={{fontWeight: 'bold'}}>TÄNK PÅ</Text>
+                                {"\n"}
+                                Konsultera Infektionskonsult/bakjour vid allvarliga och komplicerade infektioner
+                            </Text>
+                        </View>
+                        <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
+                            <Text style={styles.content}>
+                            {'\u25CF'} <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text>
                             {"\n"}
-                            Konsultera Infektionskonsult/bakjour vid allvarliga och komplicerade infektioner
-                        </Text>
-                    </View>
-                    <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>
-                        {'\u25CF'} <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text>
-                        {"\n"}
-                        a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5 ,</Text>
-                        {"\n"}
-                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
-                        {"\n"}
-                        c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
-                        {"\n"}
-                        d. imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
-                        {"\n"}
-                        {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Nekrotiserande hud- och mjukdels- infektion (myosit/fasciit):</Text> meropenem 1g
-                        x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
-                        {"\n"}
-                        + klindamycin 600-(900)mg x 3<Text style={styles.super}>8</Text>
-                        {"\n"}
-                        + ev.i.v immunglobulin
-                        {"\n"}
-                        {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Endokardit</Text> hos patient med klaffsjukdom eller blåsljud
-                        {"\n"}
-                        {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Malaria</Text> Afrika/Asien/Sydamerika
-                        </Text>
-                    </View>
-                    <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>
-                        {'\u25CF'} Legionella: utlandsresa, immunsuppression, kronisk lungsjukdom
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Pneumocystis (P. jirovecii) och aspergillus hos immunsupprimerade
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Kombinationsbehandling högdosbetalaktam<Text style={styles.super}>1</Text> och ev. ciprofloxacin (400 mg x 3<Text style={styles.super}>9</Text>) vid misstanke om pseudomonas
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Tuberkulos hos äldre, immigranter, etyliker, immunsupprimerade, långdraget förlopp
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Influensa: Tamiflu 75mg x 2 p.o.
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Covid: antiviral behandling
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Kortison (infektionskonsult): covid, pneumocystis, mycoplasma (IVAkrävande) och ev övriga agens vid svår sjukdom
-                        </Text>
-                    </View>
-                    <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>
-                        {'\u25CF'} Tidig Source control: dränera abscess
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Invasiv candida: långvarig IVA-vård, neutropeni, tarmperforation, kontinuerlig eller intermittent dialys,
-                        caspofungin<Text style={styles.super}>6, 8</Text> eller anidulafungin<Text style={styles.super}>6</Text>
-                        </Text>
-                    </View>
-                    <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
-                        <Text style={styles.content}>
-                        {'\u25CF'} Tbc-meningit hos immigranter, immunsupprimerade och ovaccinerade
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Svampmeningit hos immunsupprimerade
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Herpesencephalit: förvirring. fokalsymtom, virusgenes (aciklovir 10mg/kg x 3)<Text style={styles.super}>7</Text>
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Steroider vid samhällsförv. ABM (betametason 8mg x 4)
-                        {"\n"}
-                        {"\n"}{'\u25CF'} Antibiotikabehandling utan fördröjning - ej datortomografi före första antibiotikadosen
-                        </Text>
-                    </View>
-            </View>
+                            a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5 ,</Text>
+                            {"\n"}
+                            b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                            {"\n"}
+                            c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                            {"\n"}
+                            d. imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                            {"\n"}
+                            {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Nekrotiserande hud- och mjukdels- infektion (myosit/fasciit):</Text> meropenem 1g
+                            x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                            {"\n"}
+                            + klindamycin 600-(900)mg x 3<Text style={styles.super}>8</Text>
+                            {"\n"}
+                            + ev.i.v immunglobulin
+                            {"\n"}
+                            {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Endokardit</Text> hos patient med klaffsjukdom eller blåsljud
+                            {"\n"}
+                            {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Malaria</Text> Afrika/Asien/Sydamerika
+                            </Text>
+                        </View>
+                        <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
+                            <Text style={styles.content}>
+                            {'\u25CF'} Legionella: utlandsresa, immunsuppression, kronisk lungsjukdom
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Pneumocystis (P. jirovecii) och aspergillus hos immunsupprimerade
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Kombinationsbehandling högdosbetalaktam<Text style={styles.super}>1</Text> och ev. ciprofloxacin (400 mg x 3<Text style={styles.super}>9</Text>) vid misstanke om pseudomonas
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Tuberkulos hos äldre, immigranter, etyliker, immunsupprimerade, långdraget förlopp
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Influensa: Tamiflu 75mg x 2 p.o.
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Covid: antiviral behandling
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Kortison (infektionskonsult): covid, pneumocystis, mycoplasma (IVAkrävande) och ev övriga agens vid svår sjukdom
+                            </Text>
+                        </View>
+                        <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
+                            <Text style={styles.content}>
+                            {'\u25CF'} Tidig Source control: dränera abscess
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Invasiv candida: långvarig IVA-vård, neutropeni, tarmperforation, kontinuerlig eller intermittent dialys,
+                            caspofungin<Text style={styles.super}>6, 8</Text> eller anidulafungin<Text style={styles.super}>6</Text>
+                            </Text>
+                        </View>
+                        <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
+                            <Text style={styles.content}>
+                            {'\u25CF'} Tbc-meningit hos immigranter, immunsupprimerade och ovaccinerade
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Svampmeningit hos immunsupprimerade
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Herpesencephalit: förvirring. fokalsymtom, virusgenes (aciklovir 10mg/kg x 3)<Text style={styles.super}>7</Text>
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Steroider vid samhällsförv. ABM (betametason 8mg x 4)
+                            {"\n"}
+                            {"\n"}{'\u25CF'} Antibiotikabehandling utan fördröjning - ej datortomografi före första antibiotikadosen
+                            </Text>
+                        </View>
+                </View>
 
             <View>
                 <Text style={styles.footnotes}>
@@ -407,14 +407,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     row: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      borderWidth: 0.5,
-      borderColor: '#1F4D83',
-      backgroundColor: '#AFD4FF',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        borderWidth: 0.5,
+        borderColor: '#1F4D83',
+        backgroundColor: '#AFD4FF',
     },
     column: {
       flex: 1,
+      justifyContent: 'space-between',
       borderWidth: 0.5,
       borderColor: '#1F4D83',
     },

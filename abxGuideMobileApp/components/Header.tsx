@@ -10,7 +10,7 @@ function Header() {
         end={{ x: 0, y: 1 }}
         >
             <Text style={styles.title}>ANTIBIOTIKA PÅ AKUTEN</Text>
-            <Image style={styles.logo} source={require('./assets/abx-guide-logo.png')} />
+            <Image style={styles.logo} source={require('../assets/abx-guide-logo.png')} />
         </LinearGradient>
     )
 };

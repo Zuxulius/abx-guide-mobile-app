@@ -1,0 +1,46 @@
+import Home from './Home.tsx';
+import PdfViewer from './PdfViewer.tsx';
+import GreenCard from './GreenCard.tsx';
+import RedCard from './RedCard.tsx';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Pdf from 'react-native-pdf';
+import Navbar from './Navbar.tsx';
+import Menu from './Menu.tsx';
+import Checklist from './Checklist.tsx';
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+      <>
+        <NavigationContainer>
+          <Stack.Navigator
+          screenOptions={{
+            headerShown: false
+          }}
+          >
+            <Stack.Screen
+              name="Home"
+              component={Home}
+            />
+            <Stack.Screen
+              name="GreenCard"
+              component={GreenCard}
+            />
+            <Stack.Screen
+              name="RedCard"
+              component={RedCard}
+            />
+            <Stack.Screen
+              name="PdfViewer"
+              component={PdfViewer}
+            />
+          </Stack.Navigator>
+          <Navbar></Navbar>
+        </NavigationContainer>
+      </>
+  )
+};
+
+export default App;
