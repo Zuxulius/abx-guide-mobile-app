@@ -14,35 +14,49 @@ function Home() {
     const [menuVisible, setMenuVisible] = useState(false);
     const navigation = useNavigation();
 
+    function handlePDFbuttonPress(pdfName) {
+        navigation.navigate('PdfViewer', {pdfName});
+    }
+
     return (
         <View style={styles.container}>
             <Menu menuVisible={menuVisible} setMenuVisible={setMenuVisible}></Menu>
             <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
             <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
             <Header />
-            <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
-            <View style={styles.greenButtonDiv}>
-                <Pressable
-                style={styles.greenButton}
-                onPress={() => navigation.navigate('GreenCard')}
-                >
-                    <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
-                </Pressable>
-                <Pressable style={styles.greenButton}>
-                    <Text style={styles.buttonText}>Pneumoni</Text>
-                </Pressable>
-                <Pressable style={styles.greenButton}>
-                    <Text style={styles.buttonText}>Övriga</Text>
-                </Pressable>
-            </View>
+                <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
+                <View style={styles.greenButtonDiv}>
+                    <Pressable
+                    style={styles.greenButton}
+                    onPress={() => navigation.navigate('GreenCard')}
+                    >
+                        <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
+                    </Pressable>
+                    <Pressable style={styles.greenButton}>
+                        <Text style={styles.buttonText}>Pneumoni</Text>
+                    </Pressable>
+                    <Pressable style={styles.greenButton}>
+                        <Text style={styles.buttonText}>Övriga</Text>
+                    </Pressable>
+                    <Pressable style={styles.greenButton}
+                    onPress={() => handlePDFbuttonPress('greenCard')}
+                    >
+                        <Text style={styles.buttonText}>Grönakortet (PDF)</Text>
+                    </Pressable>
+                </View>
             <Separator />
             <Text style={styles.h2}>Intensivvårdskrävande infektioner</Text>
             <View style={styles.redButtonDiv}>
                 <Pressable
                 style={styles.redButton}
-                onPress={() => navigation.navigate('PdfViewer')}
+                onPress={() => navigation.navigate('RedCard')}
                 >
                     <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
+                </Pressable>
+                <Pressable style={styles.redButton}
+                onPress={() => handlePDFbuttonPress('redCard')}
+                >
+                    <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
                 </Pressable>
             </View>
             <Separator />

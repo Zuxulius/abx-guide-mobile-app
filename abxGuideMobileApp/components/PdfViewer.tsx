@@ -1,11 +1,27 @@
 import { View, Dimensions, StyleSheet, ScrollView, Text, } from 'react-native';
 import Pdf from 'react-native-pdf';
 
-function PdfViewer() {
+function PdfViewer({ route }) {
+
+    const { pdfName } = route.params;
+
+    let pdfSource;
+    switch(pdfName) {
+        case 'greenCard':
+            pdfSource = require('../assets/greenCard.pdf');
+            break;
+        case 'redCard':
+            pdfSource = require('../assets/redCard.pdf');
+            break;
+        default:
+            pdfSource = require('../assets/redCard.pdf');
+            break;
+    }
+
     return (
         <View style={styles.container}>
             <Pdf
-            source={require('../assets/redCard.pdf')}
+            source={pdfSource}
             horizontal={true}
             trustAllCerts={false} // Needed for android error
             onLoadComplete={(numberOfPages,filePath) => {
