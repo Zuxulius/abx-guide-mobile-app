@@ -866,19 +866,26 @@ function GreenCard() {
                     {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>1. Betalaktamantibiotika:</Text> Vid septisk chock skall, på grund av ökad distributionsvolym, alltid ökad antibiotikaexponering eftersträvas: ge höga och täta doser (minst var 6:e timma). Ge dessutom en extra laddningsdos efter 3 timmar (dos 2). Observera att behov av höga täta doser oftast gäller även vid kontinuerlig hemodialys/filtration. Ökad exponering kan också uppnås genom förlängd infusion (3-4 tim) eller kontinuerlig infusion. Monitore- ra betalaktamkoncentration.</Text>
                     {"\n"}
+                    {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>2. Vankomycin:</Text> Tilläggsbehandling med vankomycin vid misstanke om MRSA eller misstanke om vårdrelaterad KNS infektion. Ge laddningsdos härefter intermittent dosering alt. kontinuerlig infusion enl. ssk PM. Monitorera vankomycinkoncentration. Vid nedsatt njurfunktion, kontakta infek- tionsläkare.</Text>
+                    {"\n"}
                     {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>3. Aminoglykosid:</Text> Tilläggsbehandling med aminoglykosid kan övervägas vid sepsis och septisk chock om infektionen misstänks orsakas av gram- negativa bakterier (fr.a. vid urinvägsfokus) och inte kontraindikationer föreligger. Amikacin ges i laddningsdos 25-30 mg/kg, tobramycin laddningsdos 6-7 mg/kg. De högre doserna vid septisk chock, men kan ändå ge ottillräcklig effekt varför aminoglykosider ej skall ges som spektrumvidgning dvs monoterapi utanför urinvägarna. Vid BMI {">"} 30 ges lägre dos/kg kroppsvikt enligt formeln ”adjusted body weight” ABW=IBW+0,4x (TBW-IBW). Ta serum- koncentration 8 och 24 tim efter given dos, som underlag för ev fortsatt behandling med aminoglykosid, som bör ske i samråd med infektionsbakjour. Amikacin rekommenderas vid misstanke om ESBL-producerande Enterobacteriales och tobramycin vid pseudomonasinfektioner.</Text>
                     {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>Kontraindikationer till aminoglykosider:</Text> kronisk njurfunktionsnedsättning, andra nefrotoxiska droger, akut anuri, känd hörselnedsättning eller hereditet för hörselnedsättning; undvik aminoglykosid i dessa fall och ge betalaktamantibiotika med bredast möjliga spektrum (t.ex. meropenem).</Text>
                     {"\n"}
+                    {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>4. Misstanke om resistenta bakterier:</Text> ESBL: meropenem. MRSA/MRSE: tillägg av vankomycin alt. linezolid. MDR Pseudomonas/Acinetobacter: kontakta infektionsbakjour.</Text>
+                    {"\n"}
                     {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>5. Dosering vid nedsatt njurfunktion:</Text> Vid allvarliga infektioner: Ge laddningsdos av betalaktamantibiotika som vid normal njurfunktion, kon- takta infektionsbakjour för fortsatt dosregim, undvik underbehandling, monitorera betalaktam-koncentration. Följ nationellt kunskapsunderlag: https://www.sls.se/raf/ - Dosering vid dialys. Undvik: aminoglykosid, imipenem/cilastatin (pga ackumulering av cilastatin).</Text>
                     {"\n"}
+                    {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>6. Echinocandin</Text> (ska övervägas vid riskfaktorer för invasiv candida; caspofungin 70 mg laddningsdos därefter 70 mg ({">"}80 kg) eller 50 mg ({"<"} 80 kg) dagl. eller anidulafungin 200 mg laddningsdos därefter 100 mg dagl.</Text>
                     {"\n"}
+                    {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>7. Patient med allvarlig leverfunktionsnedsättning:</Text> dosreduktion av klindamycin, metronidazol, tigecyklin samt ev caspofungin och rifampicin.Samråd med infektionsbakjour.</Text>
+                    {"\n"}
                     {"\n"}
                     <Text><Text style={{fontWeight: 'bold'}}>8. Kinoloner (ciprofloxacin, levofloxacin, moxifloxacin)</Text> undvik om möjligt användning vid risk för aortaaneurysm/dissektion och/eller sjukdomstill- stånd med ökad risk för att utveckla hjärtklaffinsufficiens. Se även FASS.</Text>
                 </Text>

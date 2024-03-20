@@ -145,6 +145,13 @@ function RedCard2() {
                 {/* PNEUMONI */}
                 {/* PNEUMONI */}
                 <View style={styles.row}>
+                    <View style={styles.column}>
+                        <Text style={styles.content}>
+                        <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
+                        </Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
                         <Text style={styles.infection}>Pneumoni</Text>
                     </View>
@@ -274,6 +281,13 @@ function RedCard2() {
                 {/* BUKINFEKTION */}
                 {/* BUKINFEKTION */}
                 <View style={styles.row}>
+                    <View style={styles.column}>
+                        <Text style={styles.content}>
+                        <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
+                        </Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
                         <Text style={styles.infection}>Bukinfektion</Text>
                     </View>
@@ -379,6 +393,13 @@ function RedCard2() {
                 {/* AKUT BAKTERIELL MENINGIT (ABM) */}
                 {/* AKUT BAKTERIELL MENINGIT (ABM) */}
                 {/* AKUT BAKTERIELL MENINGIT (ABM) */}
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <Text style={styles.content}>
+                        <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
+                        </Text>
+                    </View>
+                </View>
                 <View style={styles.row}>
                     <View style={[styles.column, {backgroundColor: '#FFCAD0'}]}>
                         <Text style={styles.infection}>Akut bakteriell meningit (ABM)</Text>
