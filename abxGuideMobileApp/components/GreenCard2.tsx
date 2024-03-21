@@ -1034,7 +1034,10 @@ const styles = StyleSheet.create({
         margin: 5,
     },
     super: {
-        fontSize: 8, // Consider a library for footnotes
+        fontSize: 10, // Consider a library for footnotes
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        color: 'red',
     },
     content: {
         color: '#1F4D83',

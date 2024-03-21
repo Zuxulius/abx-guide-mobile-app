@@ -581,13 +581,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     super: {
-        fontSize: 8, // Consider a library for footnotes
+        fontSize: 10, // Consider a library for footnotes
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        color: 'red',
     },
     content: {
         color: '#1F4D83',
         padding: 5,
         fontSize: 16,
-      // Content text style
     },
     infection: {
         color: '#1F4D83',
@@ -602,7 +604,7 @@ const styles = StyleSheet.create({
       marginBottom: 50,
     },
     footnote: {
-      fontSize: 12, // Example footnote text size
+      fontSize: 12,
     },
   });
 

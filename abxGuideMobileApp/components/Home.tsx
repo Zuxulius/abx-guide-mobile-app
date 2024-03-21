@@ -33,13 +33,17 @@ function Home() {
                     >
                         <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
                     </Pressable>
-                    <Pressable style={styles.greenButton}>
+                    <Pressable style={styles.greenButton}
+                    onPress={() => navigation.navigate('GreenCard')}
+                    >
                         <Text style={styles.buttonText}>Pneumoni</Text>
                     </Pressable>
-                    <Pressable style={styles.greenButton}>
+                    <Pressable style={styles.greenButton}
+                    onPress={() => navigation.navigate('GreenCard')}
+                    >
                         <Text style={styles.buttonText}>Övriga</Text>
                     </Pressable>
-                    <Pressable style={styles.greenButton}
+                    <Pressable style={[styles.greenButton, {flexBasis: '35%'}]}
                     onPress={() => handlePDFbuttonPress('greenCard')}
                     >
                         <Text style={styles.buttonText}>Grönakortet (PDF)</Text>
@@ -54,7 +58,7 @@ function Home() {
                 >
                     <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
                 </Pressable>
-                <Pressable style={styles.redButton}
+                <Pressable style={[styles.redButton, {flexBasis: '35%'}]}
                 onPress={() => handlePDFbuttonPress('redCard')}
                 >
                     <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
@@ -76,7 +80,6 @@ function Home() {
                     <Text style={styles.buttonText}>Källor och länkar</Text>
                 </Pressable>
             </View>
-            <Footer />
         </View>
     )
 };

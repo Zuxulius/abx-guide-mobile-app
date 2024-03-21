@@ -35,10 +35,14 @@ function Menu({ menuVisible, setMenuVisible }) {
                             >
                                 <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
                             </Pressable>
-                            <Pressable style={styles.greenButton}>
+                            <Pressable style={styles.greenButton}
+                            onPress={() => navigation.navigate('GreenCard')}
+                            >
                                 <Text style={styles.buttonText}>Pneumoni</Text>
                             </Pressable>
-                            <Pressable style={styles.greenButton}>
+                            <Pressable style={styles.greenButton}
+                            onPress={() => navigation.navigate('GreenCard')}
+                            >
                                 <Text style={styles.buttonText}>Övriga</Text>
                             </Pressable>
                         </View>
