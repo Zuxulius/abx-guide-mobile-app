@@ -1,6 +1,11 @@
 import { View, StyleSheet, ScrollView, Text, } from 'react-native';
+import Modal from "react-native-modal";
+import { useState } from 'react';
 
 function GreenCard2() {
+
+    const [footnotesVisible, setFootnotesVisible] = useState(false);
+
     return (
         <ScrollView style={styles.container}>
             <View style={{marginTop: 50}}>
@@ -34,7 +39,7 @@ function GreenCard2() {
             </View>
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <Text style={styles.title2}>
-                <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text> <Text style={styles.super}>a,b,c,d,e,f</Text>
+                <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text> <Text style={[styles.super, {color: 'blue'}]}>a,b,c,d,e,f</Text>
                 {"\n"}{"\n"}{"\n"}
                 <Text style={{fontWeight: 'bold'}}>septisk chock:</Text>
                 {"\n"}{"\n"}
@@ -60,7 +65,7 @@ function GreenCard2() {
                 </View>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
-                        <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
+                        <Text style={styles.title}>Alternativ<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text></Text>
                     </View>
                     <Text style={styles.content}>
                     c. meropenem 1gx 3-4: effekt på 99% av ESBL och > 95% av Enterobacterales, vanl god effekt på Pseudomonas aeruginosa, ej effekt på Enterococcus faecalis.
@@ -84,7 +89,7 @@ function GreenCard2() {
             </View>
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <Text style={styles.title2}>
-                    <Text style={{fontWeight: 'bold'}}>Febril urinvägsinfektion hos kvinnor och män (pyelonefrit)<Text style={styles.super}> a,b,c,d,e,f</Text></Text>
+                    <Text style={{fontWeight: 'bold'}}>Febril urinvägsinfektion hos kvinnor och män (pyelonefrit)<Text style={[styles.super, {color: 'blue'}]}> a,b,c,d,e,f</Text></Text>
                 </Text>
             </View>
             <View style={styles.row}>
@@ -122,7 +127,7 @@ function GreenCard2() {
                 </View>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
-                        <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
+                        <Text style={styles.title}>Alternativ<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text></Text>
                     </View>
                     <Text style={styles.content}>
                     <Text style={{fontWeight: 'bold'}}>Poliklinisk handläggning:</Text>
@@ -154,7 +159,7 @@ function GreenCard2() {
             </View>
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <Text style={styles.title2}>
-                    <Text style={{fontWeight: 'bold'}}>Akut cystit (nedre afebril UVI) (kvinnor och män)<Text style={styles.super}> a,d</Text></Text>
+                    <Text style={{fontWeight: 'bold'}}>Akut cystit (nedre afebril UVI) (kvinnor och män)<Text style={[styles.super, {color: 'blue'}]}> a,d</Text></Text>
                 </Text>
             </View>
             <View style={styles.row}>
@@ -172,7 +177,7 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <View style={styles.rowHead}>
-                    <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
+                    <Text style={styles.title}>Alternativ<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text></Text>
                 </View>
                 <Text style={styles.content}>
                 T. trimetoprim 160mg x 2
@@ -270,15 +275,15 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}{"\n"}
                 +
                 azitromycin 500mgx1 iv alt. erytromycin 1gx3(-4 iv)
                 {"\n"}
                 eller
-                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> alt. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 </Text>
             </View>
             </View>
@@ -321,12 +326,12 @@ function GreenCard2() {
                 </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                    a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5</Text>
+                    a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5</Text>
                     {"\n"}
-                    b. meropenem 1gx3-4<Text style={styles.super}>1,2,3,4,5</Text>
+                    b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5</Text>
                     {"\n"}
                     +
-                    moxifloxacin 400mg x 1 iv<Text style={styles.super}>8</Text>
+                    moxifloxacin 400mg x 1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                     </Text>
                 </View>
             </View>
@@ -383,16 +388,16 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
                 {"\n"}
                 +
                 {"\n"}
-                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt.
+                moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> alt.
                 {"\n"}
-                levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 </Text>
             </View>
             </View>
@@ -437,9 +442,9 @@ function GreenCard2() {
                 {"\n"}
                 b. azitromycin 500mgx1 iv.
                 {"\n"}
-                c. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>.
+                c. moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>.
                 {"\n"}
-                d. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>.
+                d. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>.
                 {"\n"}
                 +
                 {"\n"}
@@ -448,9 +453,9 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
                 {"\n"}
                 +
@@ -461,9 +466,9 @@ function GreenCard2() {
                 {"\n"}
                 eller
                 {"\n"}
-                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt.
+                moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> alt.
                 {"\n"}
-                levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 </Text>
             </View>
             </View>
@@ -495,18 +500,18 @@ function GreenCard2() {
             <View style={styles.row}>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1<Text style={styles.super}>8</Text>
+                a. moxifloxacin 400mgx1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
-                b. levofloxacin 750 mg x1<Text style={styles.super}>8</Text>
+                b. levofloxacin 750 mg x1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
                 c. T. azitromycin 500 mgx1
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>
+                a. moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
-                b. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                b. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
                 c. azitromycin 500mgx1 iv
                 {"\n"}
@@ -516,9 +521,9 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>.
+                a. moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>.
                 {"\n"}
-                b. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                b. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
                 c. azitromycin 500mgx1 iv
                 {"\n"}
@@ -566,14 +571,14 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
                 +
-                moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text> alt.
+                moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> alt.
                 {"\n"}
-                levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 </Text>
             </View>
             </View>
@@ -614,15 +619,15 @@ function GreenCard2() {
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a.piperacillin/tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                a.piperacillin/tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                b.meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                b.meropenem 1g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                 {"\n"}
-                + ciprofloxacin 400mg x 3 iv<Text style={styles.super}>8</Text>
+                + ciprofloxacin 400mg x 3 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
                 eller
                 {"\n"}
-                (om cipro-resistens) aminoglykosid<Text style={styles.super}>3</Text>
+                (om cipro-resistens) aminoglykosid<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>3</Text>
                 </Text>
             </View>
             </View>
@@ -666,36 +671,36 @@ function GreenCard2() {
                 {"\n"}
                 c. T. azitromycin 500 mgx1
                 {"\n"}
-                d. T. moxifloxacin 400 mgx1<Text style={styles.super}>8</Text>
+                d. T. moxifloxacin 400 mgx1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                a. moxifloxacin 400mgx1 iv<Text style={styles.super}>8</Text>
+                a. moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
-                b. levofloxacin 750 mg x1 iv<Text style={styles.super}>8</Text>
+                b. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
                 c. azitromycin 500mgx1 iv
                 {"\n"}
                 +
                 {"\n"}
-                inf klindamycin 600 mgx3<Text style={styles.super}>7</Text> iv
+                inf klindamycin 600 mgx3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>7</Text> iv
                 </Text>
             </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
-                klindamycin 600-(900)mg x 3<Text style={styles.super}>2, 3, 4, 5, 7</Text>
+                klindamycin 600-(900)mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 7</Text>
                 {"\n"}
-                + moxifloxacin 400mg x 1 iv<Text style={styles.super}>8</Text> alt.
+                + moxifloxacin 400mg x 1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> alt.
                 {"\n"}
-                levofloxacin 750mg x 1 iv<Text style={styles.super}>8</Text> (samhällsförvärvad)
+                levofloxacin 750mg x 1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> (samhällsförvärvad)
                 {"\n"}
                 {"\n"}
-                d. klindamycin 600-(900)mg x 3 <Text style={styles.super}>2, 3, 4, 5, 7</Text>
+                d. klindamycin 600-(900)mg x 3 <Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 7</Text>
                 {"\n"}
-                + ciprofloxacin 400mg x 3 iv<Text style={styles.super}>8</Text>
+                + ciprofloxacin 400mg x 3 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                 {"\n"}
-                +/- aminoglykosid<Text style={styles.super}>3</Text> (sjukhusförvärvad/misstanke om P. aeruginosa)
+                +/- aminoglykosid<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>3</Text> (sjukhusförvärvad/misstanke om P. aeruginosa)
                 </Text>
             </View>
             </View>
@@ -708,7 +713,7 @@ function GreenCard2() {
                 {"\n"}
                 {'\u25CF'} Ornitos ( Chlamidophila psittaci) doxycyklin 200 mg x 1.
                 {"\n"}
-                {'\u25CF'} Kinoloner<Text style={styles.super}>8</Text>: moxifloxacin/levofloxacin/ciprofloxacin observera ej vid
+                {'\u25CF'} Kinoloner<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>: moxifloxacin/levofloxacin/ciprofloxacin observera ej vid
                 {"\n"}
                 aortaaneurysm, övriga kontraindikationer - se FASS
                 {"\n"}
@@ -773,17 +778,17 @@ function GreenCard2() {
                         Vid misstanke om blandinfektion med streptokocker och Staphylococcus aureus:
                         {"\n"}
                         {"\n"}
-                        c. T pcV 1gx3 + flukloxacillin 1gx3-4<Text style={styles.super}>4</Text>
+                        c. T pcV 1gx3 + flukloxacillin 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                         {"\n"}
-                        d. cefotaxim 2gx3-4<Text style={styles.super}>4</Text> alt cefuroxim
-                        1,5gx3<Text style={styles.super}>4</Text>
+                        d. cefotaxim 2gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text> alt cefuroxim
+                        1,5gx3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                     </Text>
                 </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                        inf. klindamycin 600mg x 3 iv.<Text style={styles.super}>4,7</Text>
+                        inf. klindamycin 600mg x 3 iv.<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4,7</Text>
                         {"\n"}
-                        K. klindamycin 300mg x 3<Text style={styles.super}>4,7</Text>
+                        K. klindamycin 300mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4,7</Text>
                         {"\n"}
                         {"\n"}
                         Streptokocker grupp A och B > 10% klindamycinresistens hos invasiva isolat (Swedres 2021)
@@ -820,18 +825,18 @@ function GreenCard2() {
             <View style={styles.row}>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                        a. inf. kloxacillin 2g x 4 iv.<Text style={styles.super}>4</Text>
+                        a. inf. kloxacillin 2g x 4 iv.<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                         {"\n"}
-                        b. T. flukloxacillin 1 g x 4<Text style={styles.super}>4</Text>
+                        b. T. flukloxacillin 1 g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                     </Text>
                 </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                        a. inf. klindamycin 600mg x 3 iv.<Text style={styles.super}>4, 7</Text>
+                        a. inf. klindamycin 600mg x 3 iv.<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4, 7</Text>
                         {"\n"}
-                        b. K. klindamycin 300mg x 3<Text style={styles.super}>4, 7</Text>
+                        b. K. klindamycin 300mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4, 7</Text>
                         {"\n"}
-                        c. cefotaxim 2gx3-4<Text style={styles.super}>4</Text> alt cefuroxim 1,5gx3<Text style={styles.super}>4</Text>
+                        c. cefotaxim 2gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text> alt cefuroxim 1,5gx3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                     </Text>
                 </View>
             </View>
@@ -843,7 +848,7 @@ function GreenCard2() {
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <View>
                     <Text style={styles.title2}>
-                    <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super}>1, 2, 3, 4, 5, 6, 7</Text></Text>
+                    <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6, 7</Text></Text>
                     {"\n"}
                     {"\n"}
                     Tidig Source control - dränera abscess
@@ -868,25 +873,25 @@ function GreenCard2() {
             <View style={styles.row}>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                        a. piperacillin-tazobaktam 4g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        a. piperacillin-tazobaktam 4g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,6,</Text>
                         {"\n"}
                         {"\n"}
-                        b. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        b. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,6,</Text>
                         {"\n"}
                         {"\n"}
-                        + metronidazol 500mg x 3 iv<Text style={styles.super}>7</Text>
+                        + metronidazol 500mg x 3 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>7</Text>
                         {"\n"}
                         {"\n"}
-                        c. meropenem 1g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        c. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,6,</Text>
                         {"\n"}
                         {"\n"}
-                        d. imipenem 1g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
+                        d. imipenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,6,</Text>
                         {"\n"}
                         {"\n"}
                         +
                         {"\n"}
                         {"\n"}
-                        echinocandin<Text style={styles.super}>6,7</Text> (vid misstanke om invasiv candida)
+                        echinocandin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>6,7</Text> (vid misstanke om invasiv candida)
                     </Text>
                 </View>
                 <View style={styles.column}>
@@ -907,7 +912,7 @@ function GreenCard2() {
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <View>
                     <Text style={styles.title2}>
-                    Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                    Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                     {"\n"}
                     {"\n"}
                     Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
@@ -929,15 +934,15 @@ function GreenCard2() {
             <View style={styles.row}>
                 <View style={styles.column}>
                     <Text style={styles.content}>
-                        a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5,</Text>
+                        a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,</Text>
                         {"\n"}
-                        +/- metronidazol 500mg x 3 iv<Text style={styles.super}>7</Text>
-                        {"\n"}
-                        {"\n"}
-                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1,2,3,4,5</Text>
+                        +/- metronidazol 500mg x 3 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>7</Text>
                         {"\n"}
                         {"\n"}
-                        c. meropenem 1g x 3-4<Text style={styles.super}>1,2,3,4,5</Text>
+                        b. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5</Text>
+                        {"\n"}
+                        {"\n"}
+                        c. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5</Text>
                     </Text>
                 </View>
                 <View style={styles.column}>
@@ -982,6 +987,48 @@ function GreenCard2() {
                     <Text><Text style={{fontWeight: 'bold'}}>8. Kinoloner (ciprofloxacin, levofloxacin, moxifloxacin)</Text> undvik om möjligt användning vid risk för aortaaneurysm/dissektion och/eller sjukdomstill- stånd med ökad risk för att utveckla hjärtklaffinsufficiens. Se även FASS.</Text>
                 </Text>
             </View>
+            <Modal
+            style={{margin: '15%', backgroundColor: 'whitesmoke'}}
+            backdropOpacity={0.4}
+            animationIn={'slideInRight'}
+            animationOut={'slideOutRight'}
+            isVisible={footnotesVisible}
+            onBackdropPress={() => setFootnotesVisible(false)}
+            onRequestClose={() => {
+                setFootnotesVisible(false);
+            }}>
+            <ScrollView>
+                <Text style={styles.modalFootnotes}>
+                        <Text style={{fontWeight: 'bold', fontSize: 18}}>Fotnötter - pneumoni, erysipelas, hud- och mjukdelsinfektion, bukinfektion och infektion med oklart fokus</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>1. Betalaktamantibiotika:</Text> Vid septisk chock skall, på grund av ökad distributionsvolym, alltid ökad antibiotikaexponering eftersträvas: ge höga och täta doser (minst var 6:e timma). Ge dessutom en extra laddningsdos efter 3 timmar (dos 2). Observera att behov av höga täta doser oftast gäller även vid kontinuerlig hemodialys/filtration. Ökad exponering kan också uppnås genom förlängd infusion (3-4 tim) eller kontinuerlig infusion. Monitore- ra betalaktamkoncentration.</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>2. Vankomycin:</Text> Tilläggsbehandling med vankomycin vid misstanke om MRSA eller misstanke om vårdrelaterad KNS infektion. Ge laddningsdos härefter intermittent dosering alt. kontinuerlig infusion enl. ssk PM. Monitorera vankomycinkoncentration. Vid nedsatt njurfunktion, kontakta infek- tionsläkare.</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>3. Aminoglykosid:</Text> Tilläggsbehandling med aminoglykosid kan övervägas vid sepsis och septisk chock om infektionen misstänks orsakas av gram- negativa bakterier (fr.a. vid urinvägsfokus) och inte kontraindikationer föreligger. Amikacin ges i laddningsdos 25-30 mg/kg, tobramycin laddningsdos 6-7 mg/kg. De högre doserna vid septisk chock, men kan ändå ge ottillräcklig effekt varför aminoglykosider ej skall ges som spektrumvidgning dvs monoterapi utanför urinvägarna. Vid BMI {">"} 30 ges lägre dos/kg kroppsvikt enligt formeln ”adjusted body weight” ABW=IBW+0,4x (TBW-IBW). Ta serum- koncentration 8 och 24 tim efter given dos, som underlag för ev fortsatt behandling med aminoglykosid, som bör ske i samråd med infektionsbakjour. Amikacin rekommenderas vid misstanke om ESBL-producerande Enterobacteriales och tobramycin vid pseudomonasinfektioner.</Text>
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>Kontraindikationer till aminoglykosider:</Text> kronisk njurfunktionsnedsättning, andra nefrotoxiska droger, akut anuri, känd hörselnedsättning eller hereditet för hörselnedsättning; undvik aminoglykosid i dessa fall och ge betalaktamantibiotika med bredast möjliga spektrum (t.ex. meropenem).</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>4. Misstanke om resistenta bakterier:</Text> ESBL: meropenem. MRSA/MRSE: tillägg av vankomycin alt. linezolid. MDR Pseudomonas/Acinetobacter: kontakta infektionsbakjour.</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>5. Dosering vid nedsatt njurfunktion:</Text> Vid allvarliga infektioner: Ge laddningsdos av betalaktamantibiotika som vid normal njurfunktion, kon- takta infektionsbakjour för fortsatt dosregim, undvik underbehandling, monitorera betalaktam-koncentration. Följ nationellt kunskapsunderlag: https://www.sls.se/raf/ - Dosering vid dialys. Undvik: aminoglykosid, imipenem/cilastatin (pga ackumulering av cilastatin).</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>6. Echinocandin</Text> (ska övervägas vid riskfaktorer för invasiv candida; caspofungin 70 mg laddningsdos därefter 70 mg ({">"}80 kg) eller 50 mg ({"<"} 80 kg) dagl. eller anidulafungin 200 mg laddningsdos därefter 100 mg dagl.</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>7. Patient med allvarlig leverfunktionsnedsättning:</Text> dosreduktion av klindamycin, metronidazol, tigecyklin samt ev caspofungin och rifampicin.Samråd med infektionsbakjour.</Text>
+                        {"\n"}
+                        {"\n"}
+                        <Text><Text style={{fontWeight: 'bold'}}>8. Kinoloner (ciprofloxacin, levofloxacin, moxifloxacin)</Text> undvik om möjligt användning vid risk för aortaaneurysm/dissektion och/eller sjukdomstill- stånd med ökad risk för att utveckla hjärtklaffinsufficiens. Se även FASS.</Text>
+                    </Text>
+            </ScrollView>
+            </Modal>
     </ScrollView>
   );
 }
@@ -1048,6 +1095,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
         padding: 10,
         marginBottom: 50,
+    },
+    modalFootnotes: {
+        fontSize: 16,
+        marginVertical: '20%',
+        marginHorizontal: '10%',
     },
     footnote: {
       fontSize: 12,

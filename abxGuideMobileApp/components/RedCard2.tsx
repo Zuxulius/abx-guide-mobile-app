@@ -530,9 +530,9 @@ function RedCard2() {
                     </View>
                     <Modal
                     style={{margin: '15%', backgroundColor: 'whitesmoke'}}
-                    backdropOpacity={0.1}
-                    animationIn={'slideInLeft'}
-                    animationOut={'slideOutLeft'}
+                    backdropOpacity={0.4}
+                    animationIn={'slideInRight'}
+                    animationOut={'slideOutRight'}
                     isVisible={footnotesVisible}
                     onBackdropPress={() => setFootnotesVisible(false)}
                     onRequestClose={() => {
@@ -540,7 +540,7 @@ function RedCard2() {
                     }}>
                         <ScrollView>
                             <Text style={styles.modalFootnotes}>
-                                <Text style={{fontWeight: 'bold', fontSize: 16}}>Fotnötter</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 18}}>Fotnötter</Text>
                                 {"\n"}
                                 {"\n"}
                                 <Text><Text style={{fontWeight: 'bold'}}>1. Betalaktamantibiotika:</Text> Vid septisk chock skall, på grund av ökad distributionsvolym, alltid ökad antibiotikaexponering eftersträvas: ge höga och täta doser (minst var 6:e timma). Ge dessutom en extra laddnings- dos efter 3 timmar (dos 2). Observera att behov av höga täta doser oftast gäller även vid kontinuerlig hemodialys/filtration. Ökad exponering kan också uppnås genom förlängd infusion (3-4 tim) eller kontinuerlig infusion. Monitorera betalaktamkoncentration.</Text>
@@ -655,7 +655,9 @@ const styles = StyleSheet.create({
       marginBottom: 50,
     },
     modalFootnotes: {
-        margin: '10%',
+        fontSize: 16,
+        marginVertical: '20%',
+        marginHorizontal: '10%',
     },
     footnote: {
       fontSize: 12,
