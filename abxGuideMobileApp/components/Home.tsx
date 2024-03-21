@@ -12,6 +12,7 @@ function Home() {
     const [checklistVisible, setChecklistVisible] = useState(false);
     const [allergyVisible, setAllergyVisible] = useState(false);
     const [menuVisible, setMenuVisible] = useState(false);
+
     const navigation = useNavigation();
 
     function handlePDFbuttonPress(pdfName) {

@@ -1,6 +1,6 @@
 import { View, StyleSheet, ScrollView, Text, } from 'react-native';
 
-function GreenCard() {
+function GreenCard2() {
     return (
         <ScrollView style={styles.container}>
             <View style={{marginTop: 50}}>
@@ -29,11 +29,10 @@ function GreenCard() {
             </View>
 
             {/* Row 1 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Diagnos</Text>
-                </View>
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <Text style={styles.content}>
                 <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text> <Text style={styles.super}>a,b,c,d,e,f</Text>
                 {"\n"}{"\n"}{"\n"}
@@ -44,125 +43,121 @@ function GreenCard() {
                 + tillägg av aminoglykosidf, fr.a. om ej val av karbapenem: amikacin (ESBL- producerande Enterobacterales) alt. tobramycin (Pseudomonas aeruginosa).
                 </Text>
             </View>
-
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Förstahandsval</Text>
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Förstahandsval</Text>
+                    </View>
+                    <Text style={styles.content}>
+                    a. cefotaxim 2gx3-4: god effekt på > 90% av E. coli och Klebsiella pneumoniae undantaget ESBL, sämre/saknar effekt på Enterobacterales med kromosomal inducerbar resistens (Enterobacter spp, Citrobacter spp mfl), saknar effekt på Enterococcus faecalis och Pseudomonas aeruginosa).
+                    {"\n"}{"\n"}
+                    - Tillägg av aminoglykosidf vid chock - detta kan även övervägas för spektrumvidgning till patient utan septisk chock efter konsultation med infektionsläkare.
+                    {"\n"}{"\n"}
+                    b. piperacillin/tazobaktam 4gx4: effekt på ca 95 % av E. coli och Klebsiella pneumoniae, varierande effekt på ESBL, sämre/saknar effekt på Enterobacterales, med kromosomal inducerbar resistens (Enterobacter spp, Citrobacter spp mfl), god effekt på Enterococcus faecalis och vanligen god effekt på Psedomonas aeruginosa.
+                    {"\n"}{"\n"}
+                    - Tillägg av aminoglykosidf vid chock - detta kan även övervägas för spektrumvidgning till patient utan septisk chock efter konsultation med infektionsläkare.
+                    </Text>
                 </View>
-                <Text style={styles.content}>
-                a. cefotaxim 2gx3-4: god effekt på > 90% av E. coli och Klebsiella pneumoniae undantaget ESBL, sämre/saknar effekt på Enterobacterales med kromosomal inducerbar resistens (Enterobacter spp, Citrobacter spp mfl), saknar effekt på Enterococcus faecalis och Pseudomonas aeruginosa).
-                {"\n"}{"\n"}
-                - Tillägg av aminoglykosidf vid chock - detta kan även övervägas för spektrumvidgning till patient utan septisk chock efter konsultation med infektionsläkare.
-                {"\n"}{"\n"}
-                b. piperacillin/tazobaktam 4gx4: effekt på ca 95 % av E. coli och Klebsiella pneumoniae, varierande effekt på ESBL, sämre/saknar effekt på Enterobacterales, med kromosomal inducerbar resistens (Enterobacter spp, Citrobacter spp mfl), god effekt på Enterococcus faecalis och vanligen god effekt på Psedomonas aeruginosa.
-                {"\n"}{"\n"}
-                - Tillägg av aminoglykosidf vid chock - detta kan även övervägas för spektrumvidgning till patient utan septisk chock efter konsultation med infektionsläkare.
-                </Text>
-            </View>
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
-                </View>
-                <Text style={styles.content}>
-                c. meropenem 1gx 3-4: effekt på 99% av ESBL och > 95% av Enterobacterales, vanl god effekt på Pseudomonas aeruginosa, ej effekt på Enterococcus faecalis.
-                {"\n"}{"\n"}
-                d. imipenem 1gx3-4: effekt på 99% av ESBL och > 95% av Enterobacterales dock saknas oftast effekt på Morganella, Proteus och Providencia spp, god effekt på Enterococcus faecalis, vanligen god effekt på Pseudomonas aeruginosa
-                {"\n"}{"\n"}{"\n"}
-                Se även:
-                {"\n"}{"\n"}
-                Sv.Infektionsläkareföreningen, SILF
-                {"\n"}{"\n"}
-                VP UVI (www.infektion.net) och
-                {"\n"}{"\n"}
-                Stramaappen (www.strama.se).
-                </Text>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
+                    </View>
+                    <Text style={styles.content}>
+                    c. meropenem 1gx 3-4: effekt på 99% av ESBL och > 95% av Enterobacterales, vanl god effekt på Pseudomonas aeruginosa, ej effekt på Enterococcus faecalis.
+                    {"\n"}{"\n"}
+                    d. imipenem 1gx3-4: effekt på 99% av ESBL och > 95% av Enterobacterales dock saknas oftast effekt på Morganella, Proteus och Providencia spp, god effekt på Enterococcus faecalis, vanligen god effekt på Pseudomonas aeruginosa
+                    {"\n"}{"\n"}{"\n"}
+                    Se även:
+                    {"\n"}{"\n"}
+                    Sv.Infektionsläkareföreningen, SILF
+                    {"\n"}{"\n"}
+                    VP UVI (www.infektion.net) och
+                    {"\n"}{"\n"}
+                    Stramaappen (www.strama.se).
+                    </Text>
                 </View>
             </View>
 
             {/* Row 2 */}
-            <View style={styles.row}>
-
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Diagnos</Text>
-                </View>
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <Text style={styles.content}>
                     <Text style={{fontWeight: 'bold'}}>Febril urinvägsinfektion hos kvinnor och män (pyelonefrit)<Text style={styles.super}> a,b,c,d,e,f</Text></Text>
                 </Text>
             </View>
-
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Förstahandsval</Text>
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Förstahandsval</Text>
+                    </View>
+                    <Text style={styles.content}>
+                        <Text style={{fontWeight: 'bold'}}>Sjukhusvård</Text>
+                        {"\n"}{"\n"}
+                        Normalpatienten (E. coli, Klebsiella pneumoniae) utan allvarlig samsjuklighet och utan misstanke om ESBL
+                        {"\n"}
+                        a. cefotaxim 1g x 3
+                        {"\n"}
+                        b. piperacillin-tazobaktam 4gx3-4
+                        {"\n"}{"\n"}
+                        Misstanke om ESBL, Enterobacterales med kromosomal inducerbar resistens (Enterobacter spp, Citrobacter spp mfl)
+                        {"\n"}
+                        a.meropenem 1gx3
+                        {"\n"}
+                        b.imipenem 1gx3 (ej Morganella, Proteus, Providencia)
+                        {"\n"}{"\n"}
+                        Misstanke om Enterococcus faecalis
+                        {"\n"}
+                        a.piperacillin/tazobaktam 4gx4
+                        {"\n"}
+                        b.imipenem 1gx4 (endast vid samtidig misstanke om ESBL)
+                        {"\n"}{"\n"}
+                        Misstanke om Pseudomonas aeuginosa
+                        {"\n"}
+                        a. piperacillin/tazobaktam 4gx4
+                        {"\n"}
+                        b. meropenem 1gx4 c. imipenem 1gx4
+                    </Text>
                 </View>
-                <Text style={styles.content}>
-                    <Text style={{fontWeight: 'bold'}}>Sjukhusvård</Text>
+                <View style={styles.column}>
+                    <View style={styles.rowHead}>
+                        <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
+                    </View>
+                    <Text style={styles.content}>
+                    <Text style={{fontWeight: 'bold'}}>Poliklinisk handläggning:</Text>
+                    {"\n"}
+                    opåverkad patient, ej aortaaneurysm, ej riskfaktorer för resistens, ej misstanke om enterokocker, T. ciprofloxacin 500mg x 2: kvinnor 7 dygn, män 14 dygn
                     {"\n"}{"\n"}
-                    Normalpatienten (E. coli, Klebsiella pneumoniae) utan allvarlig samsjuklighet och utan misstanke om ESBL
+                    + ev. i.v. singeldos ceftriaxon 2g (vid misstanke om kinolonresistens)
                     {"\n"}
-                    a. cefotaxim 1g x 3
+                    eller
                     {"\n"}
-                    b. piperacillin-tazobaktam 4gx3-4
+                    ertapenem 1g (vid misstanke om ESBL)
                     {"\n"}{"\n"}
-                    Misstanke om ESBL, Enterobacterales med kromosomal inducerbar resistens (Enterobacter spp, Citrobacter spp mfl)
-                    {"\n"}
-                    a.meropenem 1gx3
-                    {"\n"}
-                    b.imipenem 1gx3 (ej Morganella, Proteus, Providencia)
+                    OBS! Uppföljning inom 24 tim för att utesluta behandlingssvikt.
+                    {"\n"}{"\n"}{"\n"}
+                    Se även:
                     {"\n"}{"\n"}
-                    Misstanke om Enterococcus faecalis
-                    {"\n"}
-                    a.piperacillin/tazobaktam 4gx4
-                    {"\n"}
-                    b.imipenem 1gx4 (endast vid samtidig misstanke om ESBL)
+                    Sv.Infektionsläkareföreningen, SILF
                     {"\n"}{"\n"}
-                    Misstanke om Pseudomonas aeuginosa
-                    {"\n"}
-                    a. piperacillin/tazobaktam 4gx4
-                    {"\n"}
-                    b. meropenem 1gx4 c. imipenem 1gx4
-                </Text>
-            </View>
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Alternativ<Text style={styles.super}>1</Text></Text>
-                </View>
-                <Text style={styles.content}>
-                <Text style={{fontWeight: 'bold'}}>Poliklinisk handläggning:</Text>
-                {"\n"}
-                opåverkad patient, ej aortaaneurysm, ej riskfaktorer för resistens, ej misstanke om enterokocker, T. ciprofloxacin 500mg x 2: kvinnor 7 dygn, män 14 dygn
-                {"\n"}{"\n"}
-                + ev. i.v. singeldos ceftriaxon 2g (vid misstanke om kinolonresistens)
-                {"\n"}
-                eller
-                {"\n"}
-                ertapenem 1g (vid misstanke om ESBL)
-                {"\n"}{"\n"}
-                OBS! Uppföljning inom 24 tim för att utesluta behandlingssvikt.
-                {"\n"}{"\n"}{"\n"}
-                Se även:
-                {"\n"}{"\n"}
-                Sv.Infektionsläkareföreningen, SILF
-                {"\n"}{"\n"}
-                VP UVI (www.infektion.net) och
-                {"\n"}{"\n"}
-                Stramaappen (www.strama.se).
-                </Text>
+                    VP UVI (www.infektion.net) och
+                    {"\n"}{"\n"}
+                    Stramaappen (www.strama.se).
+                    </Text>
                 </View>
             </View>
 
             {/* Row 3 */}
-            <View style={styles.row}>
-
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title}>Diagnos</Text>
-                </View>
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                 <Text style={styles.content}>
                     <Text style={{fontWeight: 'bold'}}>Akut cystit (nedre afebril UVI) (kvinnor och män)<Text style={styles.super}> a,d</Text></Text>
                 </Text>
             </View>
-
+            <View style={styles.row}>
             <View style={styles.column}>
                 <View style={styles.rowHead}>
                     <Text style={styles.title}>Förstahandsval</Text>
@@ -962,4 +957,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default GreenCard;
+export default GreenCard2;

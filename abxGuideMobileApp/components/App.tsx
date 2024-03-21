@@ -9,6 +9,7 @@ import Navbar from './Navbar.tsx';
 import Menu from './Menu.tsx';
 import Checklist from './Checklist.tsx';
 import RedCard2 from './RedCard2.tsx';
+import GreenCard2 from './GreenCard2.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,7 +28,7 @@ function App() {
             />
             <Stack.Screen
               name="GreenCard"
-              component={GreenCard}
+              component={GreenCard2}
             />
             <Stack.Screen
               name="RedCard"
