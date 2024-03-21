@@ -33,7 +33,7 @@ function GreenCard2() {
                 <Text style={styles.title}>Diagnos</Text>
             </View>
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
-                <Text style={styles.content}>
+                <Text style={styles.title2}>
                 <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text> <Text style={styles.super}>a,b,c,d,e,f</Text>
                 {"\n"}{"\n"}{"\n"}
                 <Text style={{fontWeight: 'bold'}}>septisk chock:</Text>
@@ -83,7 +83,7 @@ function GreenCard2() {
                 <Text style={styles.title}>Diagnos</Text>
             </View>
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
-                <Text style={styles.content}>
+                <Text style={styles.title2}>
                     <Text style={{fontWeight: 'bold'}}>Febril urinvägsinfektion hos kvinnor och män (pyelonefrit)<Text style={styles.super}> a,b,c,d,e,f</Text></Text>
                 </Text>
             </View>
@@ -153,7 +153,7 @@ function GreenCard2() {
                 <Text style={styles.title}>Diagnos</Text>
             </View>
             <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
-                <Text style={styles.content}>
+                <Text style={styles.title2}>
                     <Text style={{fontWeight: 'bold'}}>Akut cystit (nedre afebril UVI) (kvinnor och män)<Text style={styles.super}> a,d</Text></Text>
                 </Text>
             </View>
@@ -221,24 +221,24 @@ function GreenCard2() {
                 <Text style={styles.headerText}>Samhällsförvärvad pneumoni</Text>
             </View>
             <View style={styles.row}>
-                <Text style={{textAlign: 'center'}}><Text style={{fontWeight: 'bold'}}>Monitorera respiration, saturation, vitalparametrar (följ NEWS).</Text>
+                <Text style={[styles.content, {textAlign: 'center'}]}><Text style={{fontWeight: 'bold'}}>Monitorera respiration, saturation, vitalparametrar (följ NEWS).</Text>
                 {"\n"}
                 Upprepa klinisk bedömning - vid försämring ompröva omgående antibiotika och vårdnivå</Text>
             </View>
             <View style={styles.row}>
-                <Text style={{textAlign: 'center'}}><Text style={{fontWeight: 'bold'}}>Riskfaktorer för allvarligt förlopp och mortalitet:</Text>
+                <Text style={[styles.content, {textAlign: 'center'}]}><Text style={{fontWeight: 'bold'}}>Riskfaktorer för allvarligt förlopp och mortalitet:</Text>
                 {"\n"}
                 1. andningsfrekvens ≥ 30/min, 2. saturation &lt; 90%, 3. BT: syst &lt; 90/diast ≤ 60, 4. konfusion, 5. samsjuklighet, 6. ålder ≥ 65 år
                 </Text>
             </View>
 
-            {/* Row titles */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <View style={styles.rowHead}>
-                    <Text style={styles.title2}></Text>
-                </View>
+            {/* Section 1 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
+                Stark misstanke om pneumokockpneumoni, “normalpatienten” utan allvarlig samsjuklighet och utan misstanke om antibiotikaresistens
+                </Text>
             </View>
+            <View style={styles.row}>
             <View style={styles.column}>
                 <View style={styles.rowHead}>
                     <Text style={styles.title2}>Ej livshotande</Text>
@@ -255,14 +255,7 @@ function GreenCard2() {
                 </View>
             </View>
             </View>
-
-            {/* Row 1 */}
             <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
-                Stark misstanke om pneumokockpneumoni, “normalpatienten” utan allvarlig samsjuklighet och utan misstanke om antibiotikaresistens
-                </Text>
-            </View>
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. bensylpc 3 g x 3-4
@@ -290,44 +283,59 @@ function GreenCard2() {
             </View>
             </View>
 
-            {/* Row 2 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
+            {/* Section 2 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
                 Misstanke om pneumokocker med nedsatt känslighet för penicillin
                 </Text>
             </View>
-
-            <View style={styles.column}>
-                <Text style={styles.content}>
-                a. T. amoxicillin 1 g x 3
-                {"\n"}
-                b. cefotaxim 2gx3
-                </Text>
-            </View>
-            <View style={styles.column}>
-                <Text style={styles.content}>
-                cefotaxim 2gx3-4
-                </Text>
-            </View>
-            <View style={styles.column}>
-                <Text style={styles.content}>
-                a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5</Text>
-                {"\n"}
-                b. meropenem 1gx3-4<Text style={styles.super}>1,2,3,4,5</Text>
-                {"\n"}
-                +
-                moxifloxacin 400mg x 1 iv<Text style={styles.super}>8</Text>
-                </Text>
-            </View>
-            </View>
-
-            {/* Row 3 */}
             <View style={styles.row}>
             <View style={styles.column}>
-                <Text style={styles.content}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    a. T. amoxicillin 1 g x 3
+                    {"\n"}
+                    b. cefotaxim 2gx3
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    cefotaxim 2gx3-4
+                    </Text>
+                </View>
+                <View style={styles.column}>
+                    <Text style={styles.content}>
+                    a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5</Text>
+                    {"\n"}
+                    b. meropenem 1gx3-4<Text style={styles.super}>1,2,3,4,5</Text>
+                    {"\n"}
+                    +
+                    moxifloxacin 400mg x 1 iv<Text style={styles.super}>8</Text>
+                    </Text>
+                </View>
+            </View>
+
+            {/* Section 3 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
                 Misstanke om H. influenzae
-                <Text style={{fontSize: 10}}>
+                <Text style={{fontSize: 14}}>
                     {"\n"}{"\n"}
                     AB-resistens mkt vanligt (ca 25%): amoxicillin och TMP/SMX
                     {"\n"}
@@ -339,8 +347,25 @@ function GreenCard2() {
                 </Text>
                 </Text>
             </View>
-
+            <View style={styles.row}>
             <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
+                <View style={styles.column}>
                 <Text style={styles.content}>
                 a. T. amoxicillin 750 mgx3
                 {"\n"}
@@ -372,13 +397,31 @@ function GreenCard2() {
             </View>
             </View>
 
-            {/* Row 4 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
+            {/* Section 4 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
                 Misstanke om atypisk genes (ej legionella)
                 </Text>
             </View>
+            <View style={styles.row}>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
+
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. T. doxycyklin 200 mg x 1 i 3 dygn följt av 100 mg x 1
@@ -425,13 +468,31 @@ function GreenCard2() {
             </View>
             </View>
 
-            {/* Row 5 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
+            {/* Section 5 */}
+
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
                 Misstanke om Legionella
                 </Text>
             </View>
+            <View style={styles.row}>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. moxifloxacin 400mgx1<Text style={styles.super}>8</Text>
@@ -467,13 +528,30 @@ function GreenCard2() {
             </View>
             </View>
 
-            {/* Row 6 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
+            {/* Section 6 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
                 Misstanke om S. aureus tex insjuknande i anslutning till influensasjukdom
                 </Text>
             </View>
+            <View style={styles.row}>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. T amoxicillin-klavulansyra 875 /125mg x 3
@@ -500,13 +578,30 @@ function GreenCard2() {
             </View>
             </View>
 
-            {/* Row 7 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
+            {/* Section 7 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
                 Allvarlig bakomliggande lungsjukdom vid misstanke om Pseudomonas aeruginosa
                 </Text>
             </View>
+            <View style={styles.row}>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
             <View style={styles.column}>
                 <Text style={styles.content}>
                 piperacillin/tazobaktam 4 gx 4
@@ -532,10 +627,9 @@ function GreenCard2() {
             </View>
             </View>
 
-            {/* Row 8 */}
-            <View style={styles.row}>
-            <View style={styles.column}>
-                <Text style={styles.content}>
+            {/* Section 8 */}
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={[styles.title2, {fontWeight: 'bold'}]}>
                 Allvarlig allergi mot betalaktamantibiotika
                 {"\n"}
                 {"\n"}
@@ -545,6 +639,24 @@ function GreenCard2() {
                 Om testdos av meropenem bedöms nödvändigt – ge omgående alternativt preparat och om ingen reaktion på testdos, ge meropenem i behandlingsdos
                 </Text>
             </View>
+            <View style={styles.row}>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Ej livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Potentiellt livshotande</Text>
+                </View>
+            </View>
+            <View style={styles.column}>
+                <View style={styles.rowHead}>
+                    <Text style={styles.title2}>Livshotande - Se även Rött Kort -</Text>
+                </View>
+            </View>
+            </View>
+            <View style={styles.row}>
             <View style={styles.column}>
                 <Text style={styles.content}>
                 a. T. doxycyklin 200 mg x 1 i 3 dygn följt av 100 mg x 1
@@ -623,13 +735,22 @@ function GreenCard2() {
                 <Text style={styles.headerText}>Övriga samhällsförvärvade bakteriella infektioner Erysipelas, hud- och mjukdelsinfektion, bukinfektion och infektion med oklart fokus</Text>
             </View>
 
-            {/* Row titles */}
+            {/* Row 1 */}
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <Text style={styles.title2}>
+                        <Text style={{fontWeight: 'bold'}}>Erysipelas (Betahemolyserande streptokocker, grupp A,B,C, G)</Text>
+                        {"\n"}
+                        {"\n"}
+                        Ansiktsros - som regel inläggning med intravenös behandling
+                        {"\n"}
+                        {"\n"}
+                        Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
+                </Text>
+            </View>
             <View style={styles.row}>
-                <View style={styles.column}>
-                    <View style={styles.rowHead}>
-                        <Text style={styles.title}>Diagnos</Text>
-                    </View>
-                </View>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
                         <Text style={styles.title}>Förstahandsval</Text>
@@ -641,21 +762,7 @@ function GreenCard2() {
                     </View>
                 </View>
             </View>
-
-            {/* Row 1 */}
-
             <View style={styles.row}>
-                <View style={styles.column}>
-                    <Text style={styles.content}>
-                    <Text style={{fontWeight: 'bold'}}>Erysipelas (Betahemolyserande streptokocker, grupp A,B,C, G)</Text>
-                    {"\n"}
-                    {"\n"}
-                    Ansiktsros - som regel inläggning med intravenös behandling
-                    {"\n"}
-                    {"\n"}
-                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
-                    </Text>
-                </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
                         a. bensyl-pc 3g x 3-4
@@ -684,13 +791,21 @@ function GreenCard2() {
                 </View>
             </View>
 
-            {/* Row titles */}
-            <View style={styles.row}>
-                <View style={styles.column}>
-                    <View style={styles.rowHead}>
-                        <Text style={styles.title}>Diagnos</Text>
-                    </View>
+            {/* Row 2 */}
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View>
+                    <Text style={styles.title2}>
+                    <Text style={{fontWeight: 'bold'}}>Hud- och mjukdelsinfektion (Staphylococcus aureus)</Text>
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
+                    </Text>
                 </View>
+            </View>
+            <View style={styles.row}>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
                         <Text style={styles.title}>Förstahandsval</Text>
@@ -702,18 +817,7 @@ function GreenCard2() {
                     </View>
                 </View>
             </View>
-
-            {/* Row 2 */}
-
             <View style={styles.row}>
-                <View style={styles.column}>
-                    <Text style={styles.content}>
-                    <Text style={{fontWeight: 'bold'}}>Hud- och mjukdelsinfektion (Staphylococcus aureus)</Text>
-                    {"\n"}
-                    {"\n"}
-                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
-                    </Text>
-                </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
                         a. inf. kloxacillin 2g x 4 iv.<Text style={styles.super}>4</Text>
@@ -732,13 +836,24 @@ function GreenCard2() {
                 </View>
             </View>
 
-            {/* Row titles */}
-            <View style={styles.row}>
-                <View style={styles.column}>
-                    <View style={styles.rowHead}>
-                        <Text style={styles.title}>Diagnos</Text>
-                    </View>
+            {/* Row 3 */}
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View>
+                    <Text style={styles.title2}>
+                    <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super}>1, 2, 3, 4, 5, 6, 7</Text></Text>
+                    {"\n"}
+                    {"\n"}
+                    Tidig Source control - dränera abscess
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande infektion - se ”rött kort”
+                    </Text>
                 </View>
+            </View>
+            <View style={styles.row}>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
                         <Text style={styles.title}>Förstahandsval</Text>
@@ -750,21 +865,7 @@ function GreenCard2() {
                     </View>
                 </View>
             </View>
-
-            {/* Row 3 */}
-
             <View style={styles.row}>
-                <View style={styles.column}>
-                    <Text style={styles.content}>
-                    <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super}>1, 2, 3, 4, 5, 6, 7</Text></Text>
-                    {"\n"}
-                    {"\n"}
-                    Tidig Source control - dränera abscess
-                    {"\n"}
-                    {"\n"}
-                    Vid misstanke om livshotande infektion - se ”rött kort”
-                    </Text>
-                </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
                         a. piperacillin-tazobaktam 4g x 3-4<Text style={styles.super}>1,2,3,4,5,6,</Text>
@@ -799,13 +900,21 @@ function GreenCard2() {
                 </View>
             </View>
 
-            {/* Row titles */}
-            <View style={styles.row}>
-                <View style={styles.column}>
-                    <View style={styles.rowHead}>
-                        <Text style={styles.title}>Diagnos</Text>
-                    </View>
+            {/* Row 4 */}
+            <View style={[styles.rowHead, {borderWidth: 0.5}]}>
+                <Text style={styles.title}>Diagnos</Text>
+            </View>
+            <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View>
+                    <Text style={styles.title2}>
+                    Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                    {"\n"}
+                    {"\n"}
+                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
+                    </Text>
                 </View>
+            </View>
+            <View style={styles.row}>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
                         <Text style={styles.title}>Förstahandsval</Text>
@@ -817,18 +926,7 @@ function GreenCard2() {
                     </View>
                 </View>
             </View>
-
-            {/* Row 4 */}
-
             <View style={styles.row}>
-                <View style={styles.column}>
-                    <Text style={styles.content}>
-                    <Text style={{fontWeight: 'bold'}}>Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super}>1, 2, 3, 4, 5</Text></Text>
-                    {"\n"}
-                    {"\n"}
-                    Vid misstanke om livshotande hud- och mjukdelsinfektion - se "rött kort"
-                    </Text>
-                </View>
                 <View style={styles.column}>
                     <Text style={styles.content}>
                         a. cefotaxim 2g x 3-4<Text style={styles.super}>1,2,3,4,5,</Text>
@@ -894,11 +992,11 @@ const styles = StyleSheet.create({
     },
     header: {
         borderTopWidth: 1,
-        backgroundColor: '#AFFFBC', // Example header color
+        backgroundColor: 'rgba(41, 255, 76, 1)',
         padding: 20,
     },
     rowHead: {
-        backgroundColor: '#AFD4FF', // Example header color
+        backgroundColor: '#AFD4FF',
     },
     headerText: {
         color: '#1F4D83',
@@ -928,16 +1026,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     title2: {
-        height: 60,
-        marginTop: 10,
-        marginBottom: 10,
-        color: '#1F4D83',
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginBottom: 5,
-        padding: 0,
-        margin: 0,
         textAlign: 'center',
+        minHeight: 60,
+        color: '#1F4D83',
+        fontSize: 16,
+        fontWeight: 'bold',
+        margin: 5,
     },
     super: {
         fontSize: 8, // Consider a library for footnotes
@@ -946,14 +1040,14 @@ const styles = StyleSheet.create({
         color: '#1F4D83',
         padding: 5,
         fontSize: 16,
-      // Content text style
     },
     footnotes: {
-      padding: 10,
-      marginBottom: 50,
+        fontSize: 16,
+        padding: 10,
+        marginBottom: 50,
     },
     footnote: {
-      fontSize: 12, // Example footnote text size
+      fontSize: 12,
     },
   });
 
