@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import Checklist from './Checklist';
 import Allergy from './Allergy';
 import { View, StyleSheet, Text, Pressable} from 'react-native';
@@ -29,17 +28,17 @@ function Home() {
                 <View style={styles.greenButtonDiv}>
                     <Pressable
                     style={styles.greenButton}
-                    onPress={() => navigation.navigate('GreenCard')}
+                    onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section1'})}
                     >
                         <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
                     </Pressable>
                     <Pressable style={styles.greenButton}
-                    onPress={() => navigation.navigate('GreenCard')}
+                    onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section2'})}
                     >
                         <Text style={styles.buttonText}>Pneumoni</Text>
                     </Pressable>
                     <Pressable style={styles.greenButton}
-                    onPress={() => navigation.navigate('GreenCard')}
+                    onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section3'})}
                     >
                         <Text style={styles.buttonText}>Övriga</Text>
                     </Pressable>

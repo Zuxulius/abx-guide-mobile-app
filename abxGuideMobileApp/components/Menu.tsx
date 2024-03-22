@@ -1,11 +1,9 @@
 import { View, StyleSheet, Text, Pressable, ScrollView } from 'react-native';
 import Modal from "react-native-modal";
 import { useState } from 'react';
-import LinearGradient from 'react-native-linear-gradient';
 import Checklist from './Checklist';
 import Allergy from './Allergy';
 import { useNavigation } from '@react-navigation/native';
-import Navbar from './Navbar';
 
 function Menu({ menuVisible, setMenuVisible }) {
 
@@ -31,17 +29,17 @@ function Menu({ menuVisible, setMenuVisible }) {
                         <View style={styles.greenButtonDiv}>
                             <Pressable
                             style={styles.greenButton}
-                            onPress={() => navigation.navigate('GreenCard')}
+                            onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section1'})}
                             >
                                 <Text style={styles.buttonText}>Urosepsis / Pyelonefrit / Nedre afebril UVI</Text>
                             </Pressable>
                             <Pressable style={styles.greenButton}
-                            onPress={() => navigation.navigate('GreenCard')}
+                            onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section2'})}
                             >
                                 <Text style={styles.buttonText}>Pneumoni</Text>
                             </Pressable>
                             <Pressable style={styles.greenButton}
-                            onPress={() => navigation.navigate('GreenCard')}
+                            onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section3'})}
                             >
                                 <Text style={styles.buttonText}>Övriga</Text>
                             </Pressable>
