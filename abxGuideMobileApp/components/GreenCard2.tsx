@@ -58,6 +58,8 @@ function GreenCard2Content() {
     const thirdSubsection3 = useRef();
     const thirdSubsection4 = useRef();
 
+    const footnoteRef = useRef();
+
     // Should create a map of some sort
     let targetRef;
     if (scrollTo === 'section1') {
@@ -1032,7 +1034,7 @@ function GreenCard2Content() {
                 </View>
 
                 <View>
-                    <Text style={styles.footnotes}>
+                    <Text ref={footnoteRef} style={styles.footnotes}>
                         <Text style={{fontWeight: 'bold', fontSize: 16}}>Fotnötter - pneumoni, erysipelas, hud- och mjukdelsinfektion, bukinfektion och infektion med oklart fokus</Text>
                         {"\n"}
                         {"\n"}
@@ -1174,6 +1176,11 @@ function GreenCard2Content() {
                             <Pressable style={styles.navScrollButton}
                             onPress={() => scrollIntoView(thirdSubsection4.current, options)}
                             ><Text>Infektion med oklart fokus</Text></Pressable>
+                        </View>
+                        <View style={{marginTop: 20}}>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(footnoteRef.current, options)}
+                            ><Text style={{fontWeight: 'bold'}}>Footnotes</Text></Pressable>
                         </View>
                     </ScrollView>
                 </Modal>

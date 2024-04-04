@@ -1,10 +1,42 @@
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
-import { useState } from 'react';
+import { View, StyleSheet, ScrollView, Text, Pressable } from 'react-native';
+import { useState, useRef } from 'react';
 import Modal from "react-native-modal";
+import { useModalVisibility } from './ModalVisibilityContext';
+import {
+    wrapScrollView, // simple wrapper, no config
+    useScrollIntoView, // access hook for imperative usage
+  } from 'react-native-scroll-into-view';
+
+const options = {
+    // options for scrollIntoView
+    align: 'top',
+};
+
+// Wrap the original ScrollView
+const CustomScrollView = wrapScrollView(ScrollView);
 
 function RedCard2() {
+    return (
+        <CustomScrollView>
+            <RedCard2Content></RedCard2Content>
+        </CustomScrollView>
+)
+}
+
+function RedCard2Content() {
 
     const [footnotesVisible, setFootnotesVisible] = useState(false);
+
+    const { redNavVisible } = useModalVisibility();
+    const { toggleGreenNavVisibility, toggleRedNavVisibility } = useModalVisibility();
+
+    const section1 = useRef();
+    const section2 = useRef();
+    const section3 = useRef();
+    const section4 = useRef();
+    const footnoteRef = useRef();
+
+    const scrollIntoView = useScrollIntoView();
 
     return (
                 <ScrollView style={styles.container}>
@@ -24,7 +56,7 @@ function RedCard2() {
                             </Text>
                         </Text>
                     </View>
-                    <View style={styles.row}>
+                    <View ref={section1} style={styles.row}>
                         <View style={styles.column}>
                             <Text style={styles.content}>
                             <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
@@ -140,7 +172,7 @@ function RedCard2() {
                         {/* PNEUMONI */}
                         {/* PNEUMONI */}
                         {/* PNEUMONI */}
-                        <View style={styles.row}>
+                        <View ref={section2} style={styles.row}>
                             <View style={styles.column}>
                                 <Text style={styles.content}>
                                 <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
@@ -275,7 +307,7 @@ function RedCard2() {
                         {/* BUKINFEKTION */}
                         {/* BUKINFEKTION */}
                         {/* BUKINFEKTION */}
-                        <View style={styles.row}>
+                        <View ref={section3} style={styles.row}>
                             <View style={styles.column}>
                                 <Text style={styles.content}>
                                 <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
@@ -386,7 +418,7 @@ function RedCard2() {
                         {/* AKUT BAKTERIELL MENINGIT (ABM) */}
                         {/* AKUT BAKTERIELL MENINGIT (ABM) */}
                         {/* AKUT BAKTERIELL MENINGIT (ABM) */}
-                        <View style={styles.row}>
+                        <View ref={section4} style={styles.row}>
                             <View style={styles.column}>
                                 <Text style={styles.content}>
                                 <Text style={{fontWeight: 'bold'}}>Initial antibiotikabehandling</Text> - dosering vid normal vikt, lever- och njurfunktion, icke gravida.
@@ -494,7 +526,7 @@ function RedCard2() {
                     {/* FOOTNOTES */}
                     {/* FOOTNOTES */}
                     <View>
-                        <Text style={styles.footnotes}>
+                        <Text ref={footnoteRef} style={styles.footnotes}>
                             <Text style={{fontWeight: 'bold', fontSize: 16}}>Fotnötter</Text>
                             {"\n"}
                             {"\n"}
@@ -573,6 +605,44 @@ function RedCard2() {
                                 <Text><Text style={{fontWeight: 'bold'}}>9. Kinoloner (ciprofloxacin, levofloxacin, moxifloxacin)</Text> skall ej ges vid aortaaneurysm, övriga kontraindikationer - se FASS.</Text>
                             </Text>
                         </ScrollView>
+                    </Modal>
+                    <Modal
+                    style={{width: '50%', backgroundColor: 'whitesmoke', marginLeft: '45%'}}
+                    backdropOpacity={0.4}
+                    animationIn={'slideInRight'}
+                    animationOut={'slideOutRight'}
+                    isVisible={redNavVisible}
+                    onBackdropPress={toggleRedNavVisibility}
+                    onRequestClose={() => { toggleRedNavVisibility
+                        ;
+                    }}>
+                        <View>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(section1.current, options)}
+                            >
+                                <Text style={{fontWeight: 'bold'}}>Sepsis med okänt fokus</Text>
+                            </Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(section2.current, options)}
+                            >
+                                <Text style={{fontWeight: 'bold'}}>Pneumoni</Text>
+                            </Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(section3.current, options)}
+                            >
+                                <Text style={{fontWeight: 'bold'}}>Bukinfektion</Text>
+                            </Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(section4.current, options)}
+                            >
+                                <Text style={{fontWeight: 'bold'}}>Akut bakteriell meningit (ABM)</Text>
+                            </Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(footnoteRef.current, options)}
+                            >
+                                <Text style={{fontWeight: 'bold'}}>Footnotes</Text>
+                            </Pressable>
+                        </View>
                     </Modal>
                 </ScrollView>
     )
@@ -662,6 +732,13 @@ const styles = StyleSheet.create({
     footnote: {
       fontSize: 12,
     },
+    navScrollButton: {
+        backgroundColor: '#FFCAD0',
+        marginTop: 5,
+        marginBottom: 5,
+        display: 'flex',
+        alignItems: 'center',
+    }
   });
 
 export default RedCard2;
