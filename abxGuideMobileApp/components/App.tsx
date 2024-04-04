@@ -10,38 +10,41 @@ import Menu from './Menu.tsx';
 import Checklist from './Checklist.tsx';
 import RedCard2 from './RedCard2.tsx';
 import GreenCard2 from './GreenCard2.tsx';
+import SectionNav from './SectionNav.tsx';
+import { ModalVisibilityProvider } from './ModalVisibilityContext.tsx';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-      <>
-        <NavigationContainer>
-          <Stack.Navigator
-          screenOptions={{
-            headerShown: false
-          }}
-          >
-            <Stack.Screen
-              name="Home"
-              component={Home}
-            />
-            <Stack.Screen
-              name="GreenCard"
-              component={GreenCard2}
-            />
-            <Stack.Screen
-              name="RedCard"
-              component={RedCard2}
-            />
-            <Stack.Screen
-              name="PdfViewer"
-              component={PdfViewer}
-            />
-          </Stack.Navigator>
-          <Navbar></Navbar>
-        </NavigationContainer>
-      </>
+        <ModalVisibilityProvider>
+          <NavigationContainer>
+            <Stack.Navigator
+            screenOptions={{
+              headerShown: false
+            }}
+            >
+              <Stack.Screen
+                name="Home"
+                component={Home}
+              />
+              <Stack.Screen
+                name="GreenCard"
+                component={GreenCard2}
+              />
+              <Stack.Screen
+                name="RedCard"
+                component={RedCard2}
+              />
+              <Stack.Screen
+                name="PdfViewer"
+                component={PdfViewer}
+              />
+            </Stack.Navigator>
+            <Navbar></Navbar>
+            <SectionNav></SectionNav>
+          </NavigationContainer>
+        </ModalVisibilityProvider>
   )
 };
 

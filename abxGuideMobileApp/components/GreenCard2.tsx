@@ -6,6 +6,8 @@ import {
     wrapScrollView, // simple wrapper, no config
     useScrollIntoView, // access hook for imperative usage
   } from 'react-native-scroll-into-view';
+import SectionNav from './SectionNav';
+import { useModalVisibility } from './ModalVisibilityContext';
 
 
 const options = {
@@ -16,17 +18,19 @@ const options = {
 // Wrap the original ScrollView
 const CustomScrollView = wrapScrollView(ScrollView);
 
-function GreenCard2() {
 
+function GreenCard2() {
     return (
             <CustomScrollView>
                 <GreenCard2Content></GreenCard2Content>
             </CustomScrollView>
     )
-
 }
 
 function GreenCard2Content() {
+
+    const { greenNavVisible } = useModalVisibility();
+    const { toggleGreenNavVisibility, toggleRedNavVisibility } = useModalVisibility();
 
     const route = useRoute();
     const { scrollTo } = route.params;
@@ -36,10 +40,25 @@ function GreenCard2Content() {
     const sectionHeader2 = useRef();
     const sectionHeader3 = useRef();
 
-    const subsection1 = useRef();
-    const subsection2 = useRef();
-    const subsection3 = useRef();
+    const firstSubsection1 = useRef();
+    const firstSubsection2 = useRef();
+    const firstSubsection3 = useRef();
 
+    const secondSubsection1 = useRef();
+    const secondSubsection2 = useRef();
+    const secondSubsection3 = useRef();
+    const secondSubsection4 = useRef();
+    const secondSubsection5 = useRef();
+    const secondSubsection6 = useRef();
+    const secondSubsection7 = useRef();
+    const secondSubsection8 = useRef();
+
+    const thirdSubsection1 = useRef();
+    const thirdSubsection2 = useRef();
+    const thirdSubsection3 = useRef();
+    const thirdSubsection4 = useRef();
+
+    // Should create a map of some sort
     let targetRef;
     if (scrollTo === 'section1') {
         targetRef = sectionHeader1;
@@ -59,7 +78,7 @@ function GreenCard2Content() {
             scrollIntoView(targetRef.current, options);
           }, 100);
         }
-      }, [scrollTo, scrollIntoView, route]);
+      }, [scrollTo, scrollIntoView, route, targetRef]);
 
     const [footnotesVisible, setFootnotesVisible] = useState(false);
 
@@ -89,17 +108,12 @@ function GreenCard2Content() {
                 <View style={styles.header}>
                     <Text style={styles.headerText}>Samhällsförvärvad Urosepsis - Pyelonefrit - nedre afebril UVI</Text>
                 </View>
-                <View style={styles.row}>
-                    <Pressable style={styles.scrollButton} onPress={() => scrollIntoView(subsection1.current, options)}><Text style={styles.scrollButtonText}>Urosepsis</Text></Pressable>
-                    <Pressable style={styles.scrollButton} onPress={() => scrollIntoView(subsection2.current, options)}><Text style={styles.scrollButtonText}>Pyelonefrit</Text></Pressable>
-                    <Pressable style={styles.scrollButton} onPress={() => scrollIntoView(subsection3.current, options)}><Text style={styles.scrollButtonText}>Akut cystit</Text></Pressable>
-                </View>
 
                 {/* Row 1 */}
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View ref={subsection1} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={firstSubsection1} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text> <Text style={[styles.super, {color: 'blue'}]}>a,b,c,d,e,f</Text>
                     {"\n"}{"\n"}{"\n"}
@@ -149,7 +163,7 @@ function GreenCard2Content() {
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View ref={subsection2} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={firstSubsection2} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                         <Text style={{fontWeight: 'bold'}}>Febril urinvägsinfektion hos kvinnor och män (pyelonefrit)<Text style={[styles.super, {color: 'blue'}]}> a,b,c,d,e,f</Text></Text>
                     </Text>
@@ -219,7 +233,7 @@ function GreenCard2Content() {
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View ref={subsection3} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={firstSubsection3} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                         <Text style={{fontWeight: 'bold'}}>Akut cystit (nedre afebril UVI) (kvinnor och män)<Text style={[styles.super, {color: 'blue'}]}> a,d</Text></Text>
                     </Text>
@@ -300,7 +314,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 1 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection1} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Stark misstanke om pneumokockpneumoni, “normalpatienten” utan allvarlig samsjuklighet och utan misstanke om antibiotikaresistens
                     </Text>
@@ -351,7 +365,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 2 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection2} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Misstanke om pneumokocker med nedsatt känslighet för penicillin
                     </Text>
@@ -399,7 +413,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 3 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection3} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Misstanke om H. influenzae
                     <Text style={{fontSize: 14}}>
@@ -465,7 +479,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 4 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection4} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Misstanke om atypisk genes (ej legionella)
                     </Text>
@@ -537,7 +551,7 @@ function GreenCard2Content() {
 
                 {/* Section 5 */}
 
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection5} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Misstanke om Legionella
                     </Text>
@@ -596,7 +610,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 6 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection6} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Misstanke om S. aureus tex insjuknande i anslutning till influensasjukdom
                     </Text>
@@ -646,7 +660,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 7 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection7} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                     Allvarlig bakomliggande lungsjukdom vid misstanke om Pseudomonas aeruginosa
                     </Text>
@@ -695,7 +709,7 @@ function GreenCard2Content() {
                 </View>
 
                 {/* Section 8 */}
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={secondSubsection8} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={[styles.title2, {fontWeight: 'bold'}]}>
                     Allvarlig allergi mot betalaktamantibiotika
                     {"\n"}
@@ -801,12 +815,11 @@ function GreenCard2Content() {
                 <View ref={sectionHeader3} style={styles.header}>
                     <Text style={styles.headerText}>Övriga samhällsförvärvade bakteriella infektioner Erysipelas, hud- och mjukdelsinfektion, bukinfektion och infektion med oklart fokus</Text>
                 </View>
-
                 {/* Row 1 */}
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={thirdSubsection1} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <Text style={styles.title2}>
                             <Text style={{fontWeight: 'bold'}}>Erysipelas (Betahemolyserande streptokocker, grupp A,B,C, G)</Text>
                             {"\n"}
@@ -862,7 +875,7 @@ function GreenCard2Content() {
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={thirdSubsection2} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <View>
                         <Text style={styles.title2}>
                         <Text style={{fontWeight: 'bold'}}>Hud- och mjukdelsinfektion (Staphylococcus aureus)</Text>
@@ -907,7 +920,7 @@ function GreenCard2Content() {
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={thirdSubsection3} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <View>
                         <Text style={styles.title2}>
                         <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6, 7</Text></Text>
@@ -971,7 +984,7 @@ function GreenCard2Content() {
                 <View style={[styles.rowHead, {borderWidth: 0.5}]}>
                     <Text style={styles.title}>Diagnos</Text>
                 </View>
-                <View style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
+                <View ref={thirdSubsection4} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <View>
                         <Text style={styles.title2}>
                         Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
@@ -1091,6 +1104,79 @@ function GreenCard2Content() {
                         </Text>
                 </ScrollView>
                 </Modal>
+                <Modal
+                style={{width: '50%', backgroundColor: 'whitesmoke', marginLeft: '45%'}}
+                backdropOpacity={0.4}
+                animationIn={'slideInRight'}
+                animationOut={'slideOutRight'}
+                isVisible={greenNavVisible}
+                onBackdropPress={toggleGreenNavVisibility}
+                onRequestClose={() => { toggleGreenNavVisibility
+                    ;
+                }}>
+                    <ScrollView>
+                        <View>
+                            <Pressable style={[styles.navScrollButton]}
+                            onPress={() => scrollIntoView(sectionHeader1.current, options)}
+                            ><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad Urosepsis - Pyelonefrit - nedre afebril UVI</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(firstSubsection1.current, options)}
+                            ><Text>Urosepsis</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(firstSubsection2.current, options)}
+                            ><Text>Pyelonefrit</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(firstSubsection3.current, options)}
+                            ><Text>Akut cystit</Text></Pressable>
+                        </View>
+                        <View>
+                            <Pressable style={[styles.navScrollButton]}
+                            onPress={() => scrollIntoView(sectionHeader2.current, options)}
+                            ><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad Pneumoni</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection1.current, options)}
+                            ><Text>Stark misstanke om pneumokockpneumoni, "normalpatienten"</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection2.current, options)}
+                            ><Text>Misstanke om pneumockocker, nedsatt känslighet penicillin</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection3.current, options)}
+                            ><Text>Misstanke om H. influenzae</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection4.current, options)}
+                            ><Text>Misstanke om atypisk genes (ej legionella)</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection5.current, options)}
+                            ><Text>Misstanke om Legionella</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection6.current, options)}
+                            ><Text>Misstanke om S. aureus tex</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection7.current, options)}
+                            ><Text>Allvarlig bakomliggande lungsjukdom vid misstanke om Pseudomonas aeruginosa</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection8.current, options)}
+                            ><Text>Allvarlig allergi mot betalaktamantibiotika</Text></Pressable>
+                        </View>
+                        <View>
+                            <Pressable style={[styles.navScrollButton]}
+                            onPress={() => scrollIntoView(sectionHeader3.current, options)}
+                            ><Text style={{fontWeight: 'bold'}}>Övriga samhällsförvärvade bakteriella infektioner</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(thirdSubsection1.current, options)}
+                            ><Text>Erysipelas</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(thirdSubsection2.current, options)}
+                            ><Text>Hud - och mjukdelsinfektion</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(thirdSubsection3.current, options)}
+                            ><Text>Bukinfektion</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(thirdSubsection4.current, options)}
+                            ><Text>Infektion med oklart fokus</Text></Pressable>
+                        </View>
+                    </ScrollView>
+                </Modal>
         </ScrollView>
   );
 }
@@ -1171,11 +1257,19 @@ const styles = StyleSheet.create({
         flexBasis: '33.3%',
     },
     scrollButtonText: {
+        height: 50,
         textAlign: 'center',
         borderWidth: 1,
         color: 'blue',
         fontWeight: 'bold',
         padding: 5,
+    },
+    navScrollButton: {
+        backgroundColor: '#AFFFBC',
+        marginTop: 5,
+        marginBottom: 5,
+        display: 'flex',
+        alignItems: 'center',
     }
   });
 
