@@ -1177,7 +1177,7 @@ function GreenCard2Content() {
                             onPress={() => scrollIntoView(thirdSubsection4.current, options)}
                             ><Text>Infektion med oklart fokus</Text></Pressable>
                         </View>
-                        <View style={{marginTop: 20}}>
+                        <View>
                             <Pressable style={styles.navScrollButton}
                             onPress={() => scrollIntoView(footnoteRef.current, options)}
                             ><Text style={{fontWeight: 'bold'}}>Footnotes</Text></Pressable>
@@ -1272,9 +1272,11 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     navScrollButton: {
+        borderWidth: 1,
         backgroundColor: '#AFFFBC',
         marginTop: 5,
         marginBottom: 5,
+        marginHorizontal: 5,
         display: 'flex',
         alignItems: 'center',
     }

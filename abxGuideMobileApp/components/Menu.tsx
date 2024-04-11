@@ -11,6 +11,10 @@ function Menu({ menuVisible, setMenuVisible }) {
     const [allergyVisible, setAllergyVisible] = useState(false);
     const navigation = useNavigation();
 
+    function handlePDFbuttonPress(pdfName) {
+        navigation.navigate('PdfViewer', {pdfName});
+    }
+
     return (
         <>
             <Modal
@@ -25,9 +29,15 @@ function Menu({ menuVisible, setMenuVisible }) {
             }}>
                 <View style={styles.menu}>
                     <View style={styles.menuItems}>
-                        <Text style={[styles.h2, {marginTop: 30}]}>Vanliga samhällsförvärvade infektioner</Text>
+                        {/* <Text style={[styles.h2, {marginTop: 30}]}>Vanliga samhällsförvärvade infektioner</Text> */}
                         <View style={styles.greenButtonDiv}>
                             <Pressable
+                            style={styles.greenButton}
+                            onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section1'})}
+                            >
+                                <Text style={styles.buttonText}>Vanliga samhällsförvärvade infektioner</Text>
+                            </Pressable>
+                            {/* <Pressable
                             style={styles.greenButton}
                             onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section1'})}
                             >
@@ -42,18 +52,24 @@ function Menu({ menuVisible, setMenuVisible }) {
                             onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section3'})}
                             >
                                 <Text style={styles.buttonText}>Övriga</Text>
-                            </Pressable>
+                            </Pressable> */}
                         </View>
-                        <Text style={styles.h2}>Intensivvårdskrävande infektioner</Text>
+                        {/* <Text style={styles.h2}>Intensivvårdskrävande infektioner</Text> */}
                         <View style={styles.redButtonDiv}>
                             <Pressable
                             style={styles.redButton}
                             onPress={() => navigation.navigate('RedCard')}
                             >
-                                <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
+                                <Text style={styles.buttonText}>Intensivvårdskrävande infektioner</Text>
                             </Pressable>
+                            {/* <Pressable
+                            style={styles.redButton}
+                            onPress={() => navigation.navigate('RedCard')}
+                            >
+                                <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
+                            </Pressable> */}
                         </View>
-                        <Text style={styles.h2}>Snabbresurser</Text>
+                        {/* <Text style={styles.h2}>Snabbresurser</Text> */}
                         <View style={styles.resourceButtonDiv}>
                             <Pressable style={styles.resourceButton} onPress={() => setChecklistVisible(!checklistVisible)}>
                                 <Text style={styles.buttonText}>Checklista</Text>
@@ -61,14 +77,26 @@ function Menu({ menuVisible, setMenuVisible }) {
                             <Pressable style={styles.resourceButton} onPress={() => setAllergyVisible(!allergyVisible)}>
                                 <Text style={styles.buttonText}>Penicillin-allergi</Text>
                             </Pressable>
-                            <Pressable style={styles.resourceButton}>
+                            {/* <Pressable style={styles.resourceButton}>
                                 <Text style={styles.buttonText}>Kontakt</Text>
                             </Pressable>
                             <Pressable style={styles.resourceButton}>
                                 <Text style={styles.buttonText}>Källor och länkar</Text>
+                            </Pressable> */}
+                        </View>
+                        <View style={styles.greenButtonDiv}>
+                            <Pressable style={[styles.greenButton, {height: 30}]}
+                            onPress={() => handlePDFbuttonPress('greenCard')}
+                            >
+                                <Text style={styles.buttonText}>Grönakortet (PDF)</Text>
+                            </Pressable>
+                            <Pressable style={[styles.redButton, {height: 30}]}
+                            onPress={() => handlePDFbuttonPress('redCard')}
+                            >
+                                <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
                             </Pressable>
                         </View>
-                        </View>
+                    </View>
                 </View>
                 <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
                 <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
@@ -130,16 +158,17 @@ const styles = StyleSheet.create ({
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 10,
-    marginTop: 10,
+    marginTop: 30,
     },
     redButtonDiv: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 10,
-    marginTop: 10,
+    marginTop: 20,
     },
     greenButton: {
+        height: 75,
         flexBasis: '90%',
         display: 'flex',
         justifyContent: 'center',
@@ -150,6 +179,7 @@ const styles = StyleSheet.create ({
         borderColor: 'lightblue',
       },
       redButton: {
+        height: 75,
         flexBasis: '90%',
         display: 'flex',
         justifyContent: 'center',
@@ -177,7 +207,7 @@ const styles = StyleSheet.create ({
         flexWrap: 'wrap',
         justifyContent: 'center',
         gap: 10,
-        marginTop: 10,
+        marginTop: 20,
       },
       buttonText: {
         fontFamily: 'Arial, Helvetica, sans-serif',

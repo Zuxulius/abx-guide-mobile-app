@@ -7,8 +7,8 @@ export function useModalVisibility() {
 }
 
 export const ModalVisibilityProvider = ({ children }) => {
-  const [greenNavVisible, setGreenNavVisible] = useState(false);
-  const [redNavVisible, setRedNavVisible] = useState(false);
+  const [greenNavVisible, setGreenNavVisible] = useState(true);
+  const [redNavVisible, setRedNavVisible] = useState(true);
 
   const toggleGreenNavVisibility = () => {
     setGreenNavVisible(!greenNavVisible);

@@ -733,9 +733,11 @@ const styles = StyleSheet.create({
       fontSize: 12,
     },
     navScrollButton: {
+        borderWidth: 1,
         backgroundColor: '#FFCAD0',
         marginTop: 5,
         marginBottom: 5,
+        marginHorizontal: 5,
         display: 'flex',
         alignItems: 'center',
     }

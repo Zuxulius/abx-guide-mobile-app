@@ -24,9 +24,9 @@ function Home() {
             <Checklist checklistVisible={checklistVisible} setChecklistVisible={setChecklistVisible}></Checklist>
             <Allergy allergyVisible={allergyVisible} setAllergyVisible={setAllergyVisible}></Allergy>
             <Header />
-                <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text>
+                {/* <Text style={[{marginTop: 10}, styles.h2]}>Vanliga samhällsförvärvade infektioner</Text> */}
                 <View style={styles.greenButtonDiv}>
-                    <Pressable
+{/*                     <Pressable
                     style={styles.greenButton}
                     onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section1'})}
                     >
@@ -41,30 +41,30 @@ function Home() {
                     onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section3'})}
                     >
                         <Text style={styles.buttonText}>Övriga</Text>
-                    </Pressable>
-                    <Pressable style={[styles.greenButton, {flexBasis: '35%'}]}
-                    onPress={() => handlePDFbuttonPress('greenCard')}
+                    </Pressable> */}
+                    <Pressable style={[styles.greenButton, {}]}
+                    onPress={() => navigation.navigate('GreenCard', {scrollTo: 'section1'})}
                     >
-                        <Text style={styles.buttonText}>Grönakortet (PDF)</Text>
+                        <Text style={styles.buttonText}>Vanliga samhällsförvärvade infektioner</Text>
                     </Pressable>
                 </View>
             <Separator />
-            <Text style={styles.h2}>Intensivvårdskrävande infektioner</Text>
+            {/* <Text style={styles.h2}>Intensivvårdskrävande infektioner</Text> */}
             <View style={styles.redButtonDiv}>
-                <Pressable
+                {/* <Pressable
                 style={styles.redButton}
                 onPress={() => navigation.navigate('RedCard')}
                 >
                     <Text style={styles.buttonText}>Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)</Text>
-                </Pressable>
-                <Pressable style={[styles.redButton, {flexBasis: '35%'}]}
-                onPress={() => handlePDFbuttonPress('redCard')}
+                </Pressable> */}
+                <Pressable style={[styles.redButton, {}]}
+                onPress={() => navigation.navigate('RedCard')}
                 >
-                    <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
+                    <Text style={styles.buttonText}>Intensivvårdskrävande infektioner</Text>
                 </Pressable>
             </View>
             <Separator />
-            <Text style={styles.h2}>Snabbresurser</Text>
+            {/* <Text style={styles.h2}>Snabbresurser</Text> */}
             <View style={styles.resourceButtonDiv}>
                 <Pressable style={styles.resourceButton} onPress={() => setChecklistVisible(!checklistVisible)}>
                     <Text style={styles.buttonText}>Checklista</Text>
@@ -72,11 +72,25 @@ function Home() {
                 <Pressable style={styles.resourceButton} onPress={() => setAllergyVisible(!allergyVisible)}>
                     <Text style={styles.buttonText}>Penicillin-allergi</Text>
                 </Pressable>
-                <Pressable style={styles.resourceButton}>
+                {/* <Pressable style={styles.resourceButton}>
                     <Text style={styles.buttonText}>Kontakt</Text>
                 </Pressable>
                 <Pressable style={styles.resourceButton}>
                     <Text style={styles.buttonText}>Källor och länkar</Text>
+                </Pressable> */}
+            </View>
+            <Separator />
+            <Text style={styles.h2}>PDF</Text>
+            <View style={styles.resourceButtonDiv}>
+                <Pressable style={[styles.greenButton, {height: 30}]}
+                onPress={() => handlePDFbuttonPress('greenCard')}
+                >
+                    <Text style={styles.buttonText}>Grönakortet (PDF)</Text>
+                </Pressable>
+                <Pressable style={[styles.redButton, {height: 30}]}
+                onPress={() => handlePDFbuttonPress('redCard')}
+                >
+                    <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
                 </Pressable>
             </View>
         </View>
@@ -122,7 +136,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
       },
       greenButton: {
-        height: 30,
+        height: 50,
         flexBasis: '80%',
         display: 'flex',
         justifyContent: 'center',
@@ -133,6 +147,7 @@ const styles = StyleSheet.create({
         borderColor: 'lightblue',
       },
       redButton: {
+        height: 50,
         flexBasis: '80%',
         display: 'flex',
         justifyContent: 'center',
