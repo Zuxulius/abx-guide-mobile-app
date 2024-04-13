@@ -616,33 +616,35 @@ function RedCard2Content() {
                     onRequestClose={() => { toggleRedNavVisibility
                         ;
                     }}>
-                        <View>
-                            <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(section1.current, options)}
-                            >
-                                <Text style={{fontWeight: 'bold'}}>Sepsis med okänt fokus</Text>
-                            </Pressable>
-                            <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(section2.current, options)}
-                            >
-                                <Text style={{fontWeight: 'bold'}}>Pneumoni</Text>
-                            </Pressable>
-                            <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(section3.current, options)}
-                            >
-                                <Text style={{fontWeight: 'bold'}}>Bukinfektion</Text>
-                            </Pressable>
-                            <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(section4.current, options)}
-                            >
-                                <Text style={{fontWeight: 'bold'}}>Akut bakteriell meningit (ABM)</Text>
-                            </Pressable>
-                            <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(footnoteRef.current, options)}
-                            >
-                                <Text style={{fontWeight: 'bold'}}>Footnotes</Text>
-                            </Pressable>
-                        </View>
+                        <ScrollView>
+                            <View>
+                                <Pressable style={styles.navScrollButton}
+                                onPress={() => scrollIntoView(section1.current, options)}
+                                >
+                                    <Text style={{fontWeight: 'bold'}}>Sepsis med okänt fokus</Text>
+                                </Pressable>
+                                <Pressable style={styles.navScrollButton}
+                                onPress={() => scrollIntoView(section2.current, options)}
+                                >
+                                    <Text style={{fontWeight: 'bold'}}>Pneumoni</Text>
+                                </Pressable>
+                                <Pressable style={styles.navScrollButton}
+                                onPress={() => scrollIntoView(section3.current, options)}
+                                >
+                                    <Text style={{fontWeight: 'bold'}}>Bukinfektion</Text>
+                                </Pressable>
+                                <Pressable style={styles.navScrollButton}
+                                onPress={() => scrollIntoView(section4.current, options)}
+                                >
+                                    <Text style={{fontWeight: 'bold'}}>Akut bakteriell meningit (ABM)</Text>
+                                </Pressable>
+                                <Pressable style={styles.navScrollButton}
+                                onPress={() => scrollIntoView(footnoteRef.current, options)}
+                                >
+                                    <Text style={{fontWeight: 'bold'}}>Footnotes</Text>
+                                </Pressable>
+                            </View>
+                        </ScrollView>
                     </Modal>
                 </ScrollView>
     )
