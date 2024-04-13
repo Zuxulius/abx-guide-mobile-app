@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# IDE settings
+.idea/
+.vscode/
+
+# Build output
+/build
+
+# Gradle files
+android/app/gradle.properties
+
