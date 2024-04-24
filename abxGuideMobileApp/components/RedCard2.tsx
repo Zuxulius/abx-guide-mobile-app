@@ -34,6 +34,7 @@ function RedCard2Content() {
     const section2 = useRef();
     const section3 = useRef();
     const section4 = useRef();
+    const section6 = useRef();
     const footnoteRef = useRef();
 
     const scrollIntoView = useScrollIntoView();
@@ -135,7 +136,7 @@ function RedCard2Content() {
                                 </Text>
                             </View>
                         </View>
-                        <View style={[styles.row, {backgroundColor: '#FF8080'}]}>
+                        <View ref={section6} style={[styles.row, {backgroundColor: '#FF8080'}]}>
                                 <View style={styles.column}>
                                     <Text style={styles.content}>
                                         <Text style={{fontWeight: 'bold'}}>TÄNK PÅ</Text>
@@ -622,6 +623,11 @@ function RedCard2Content() {
                                 onPress={() => scrollIntoView(section1.current, options)}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Sepsis med okänt fokus</Text>
+                                </Pressable>
+                                <Pressable style={styles.navScrollButton}
+                                onPress={() => scrollIntoView(section6.current, options)}
+                                >
+                                    <Text style={{fontWeight: 'bold'}}>Urosepsis & Myosit/Fasciit</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => scrollIntoView(section2.current, options)}

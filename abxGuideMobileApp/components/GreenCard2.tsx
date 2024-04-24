@@ -43,6 +43,7 @@ function GreenCard2Content() {
     const firstSubsection1 = useRef();
     const firstSubsection2 = useRef();
     const firstSubsection3 = useRef();
+    const firstSubsection4 = useRef();
 
     const secondSubsection1 = useRef();
     const secondSubsection2 = useRef();
@@ -52,6 +53,7 @@ function GreenCard2Content() {
     const secondSubsection6 = useRef();
     const secondSubsection7 = useRef();
     const secondSubsection8 = useRef();
+    const secondSubsection9 = useRef();
 
     const thirdSubsection1 = useRef();
     const thirdSubsection2 = useRef();
@@ -270,7 +272,7 @@ function GreenCard2Content() {
                     </Text>
                     </View>
                 </View>
-                <View>
+                <View ref={firstSubsection4} style={styles.row}>
                     <Text style={styles.footnotes}>
                     <Text style={{fontWeight: 'bold'}}>Att tänka på vid urosepsis och febril UVI!</Text>
                     {"\n"}{"\n"}
@@ -783,7 +785,7 @@ function GreenCard2Content() {
                 </View>
                 </View>
 
-                <View>
+                <View ref={secondSubsection9} style={styles.row}>
                     <Text style={styles.footnotes}>
                     <Text style={{fontWeight: 'bold'}}>Att tänka på!</Text>
                     {"\n"}
@@ -1130,6 +1132,9 @@ function GreenCard2Content() {
                             <Pressable style={styles.navScrollButton}
                             onPress={() => scrollIntoView(firstSubsection3.current, options)}
                             ><Text>Akut cystit</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(firstSubsection4.current, options)}
+                            ><Text>Att tänka på</Text></Pressable>
                         </View>
                         <View>
                             <Pressable style={[styles.navScrollButton]}
@@ -1159,6 +1164,9 @@ function GreenCard2Content() {
                             <Pressable style={styles.navScrollButton}
                             onPress={() => scrollIntoView(secondSubsection8.current, options)}
                             ><Text>Allvarlig allergi mot betalaktamantibiotika</Text></Pressable>
+                            <Pressable style={styles.navScrollButton}
+                            onPress={() => scrollIntoView(secondSubsection9.current, options)}
+                            ><Text>Att tänka på</Text></Pressable>
                         </View>
                         <View>
                             <Pressable style={[styles.navScrollButton]}
