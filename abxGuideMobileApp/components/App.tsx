@@ -1,4 +1,5 @@
 import Home from './Home.tsx';
+import About from './About.tsx';
 import PdfViewer from './PdfViewer.tsx';
 import GreenCard from './GreenCard.tsx';
 import RedCard from './RedCard.tsx';
@@ -39,6 +40,10 @@ function App() {
               <Stack.Screen
                 name="PdfViewer"
                 component={PdfViewer}
+              />
+              <Stack.Screen
+                name="About"
+                component={About}
               />
             </Stack.Navigator>
             <Navbar></Navbar>

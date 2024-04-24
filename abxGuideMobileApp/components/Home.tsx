@@ -93,6 +93,14 @@ function Home() {
                     <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
                 </Pressable>
             </View>
+            <Separator />
+            <View style={styles.resourceButtonDiv}>
+                <Pressable style={[styles.resourceButton, {flexBasis: '25%'}]}
+                onPress={() => navigation.navigate('About')}
+                >
+                    <Text style={styles.buttonText}>About</Text>
+                </Pressable>
+            </View>
         </View>
     )
 };

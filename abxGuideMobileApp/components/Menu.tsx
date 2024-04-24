@@ -95,6 +95,11 @@ function Menu({ menuVisible, setMenuVisible }) {
                             >
                                 <Text style={styles.buttonText}>Rödakortet (PDF)</Text>
                             </Pressable>
+                            <Pressable style={[styles.resourceButton, {flexBasis: '50%', marginTop: 20}]}
+                            onPress={() => navigation.navigate('About')}
+                            >
+                                <Text style={styles.buttonText}>About</Text>
+                            </Pressable>
                         </View>
                     </View>
                 </View>
