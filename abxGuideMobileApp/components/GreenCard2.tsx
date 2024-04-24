@@ -1121,73 +1121,142 @@ function GreenCard2Content() {
                     <ScrollView>
                         <View>
                             <Pressable style={[styles.navScrollButton]}
-                            onPress={() => scrollIntoView(sectionHeader1.current, options)}
+                            onPress={() => {
+                                scrollIntoView(sectionHeader1.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+
+                            }}
                             ><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad Urosepsis - Pyelonefrit - nedre afebril UVI</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(firstSubsection1.current, options)}
+                            onPress={() => {
+                                scrollIntoView(firstSubsection1.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+
+                            }}
                             ><Text>Urosepsis</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(firstSubsection2.current, options)}
+                            onPress={() => {
+                                scrollIntoView(firstSubsection2.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+
+                            }}
                             ><Text>Pyelonefrit</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(firstSubsection3.current, options)}
+                            onPress={() => {
+                                scrollIntoView(firstSubsection3.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+
+                            }}
                             ><Text>Akut cystit</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(firstSubsection4.current, options)}
+                            onPress={() => {
+                                scrollIntoView(firstSubsection4.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+
+                            }}
                             ><Text>Att tänka på</Text></Pressable>
                         </View>
                         <View>
                             <Pressable style={[styles.navScrollButton]}
-                            onPress={() => scrollIntoView(sectionHeader2.current, options)}
+                            onPress={() => {
+                                scrollIntoView(sectionHeader2.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad Pneumoni</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection1.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection1.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Stark misstanke om pneumokockpneumoni, "normalpatienten"</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection2.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection2.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+
+                            }}
                             ><Text>Misstanke om pneumockocker, nedsatt känslighet penicillin</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection3.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection3.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Misstanke om H. influenzae</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection4.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection4.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Misstanke om atypisk genes (ej legionella)</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection5.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection5.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Misstanke om Legionella</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection6.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection6.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Misstanke om S. aureus tex</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection7.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection7.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Allvarlig bakomliggande lungsjukdom vid misstanke om Pseudomonas aeruginosa</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection8.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection8.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Allvarlig allergi mot betalaktamantibiotika</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(secondSubsection9.current, options)}
+                            onPress={() => {
+                                scrollIntoView(secondSubsection9.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Att tänka på</Text></Pressable>
                         </View>
                         <View>
                             <Pressable style={[styles.navScrollButton]}
-                            onPress={() => scrollIntoView(sectionHeader3.current, options)}
+                            onPress={() => {
+                                scrollIntoView(sectionHeader3.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text style={{fontWeight: 'bold'}}>Övriga samhällsförvärvade bakteriella infektioner</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(thirdSubsection1.current, options)}
+                            onPress={() => {
+                                scrollIntoView(thirdSubsection1.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Erysipelas</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(thirdSubsection2.current, options)}
+                            onPress={() => {
+                                scrollIntoView(thirdSubsection2.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Hud - och mjukdelsinfektion</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(thirdSubsection3.current, options)}
+                            onPress={() => {
+                                scrollIntoView(thirdSubsection3.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Bukinfektion</Text></Pressable>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(thirdSubsection4.current, options)}
+                            onPress={() => {
+                                scrollIntoView(thirdSubsection4.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text>Infektion med oklart fokus</Text></Pressable>
                         </View>
                         <View>
                             <Pressable style={styles.navScrollButton}
-                            onPress={() => scrollIntoView(footnoteRef.current, options)}
+                            onPress={() => {
+                                scrollIntoView(footnoteRef.current, options);
+                                toggleGreenNavVisibility(!greenNavVisible);
+                            }}
                             ><Text style={{fontWeight: 'bold'}}>Footnotes</Text></Pressable>
                         </View>
                     </ScrollView>

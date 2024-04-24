@@ -620,32 +620,50 @@ function RedCard2Content() {
                         <ScrollView>
                             <View>
                                 <Pressable style={styles.navScrollButton}
-                                onPress={() => scrollIntoView(section1.current, options)}
+                                onPress={() => {
+                                    scrollIntoView(section1.current, options);
+                                    toggleRedNavVisibility(!redNavVisible);
+                                }}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Sepsis med okänt fokus</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
-                                onPress={() => scrollIntoView(section6.current, options)}
+                                onPress={() => {
+                                    scrollIntoView(section6.current, options);
+                                    toggleRedNavVisibility(!redNavVisible);
+                                }}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Urosepsis & Myosit/Fasciit</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
-                                onPress={() => scrollIntoView(section2.current, options)}
+                                onPress={() => {
+                                    scrollIntoView(section2.current, options);
+                                    toggleRedNavVisibility(!redNavVisible);
+                                }}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Pneumoni</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
-                                onPress={() => scrollIntoView(section3.current, options)}
+                                onPress={() => {
+                                    scrollIntoView(section3.current, options);
+                                    toggleRedNavVisibility(!redNavVisible);
+                                }}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Bukinfektion</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
-                                onPress={() => scrollIntoView(section4.current, options)}
+                                onPress={() => {
+                                    scrollIntoView(section4.current, options);
+                                    toggleRedNavVisibility(!redNavVisible);
+                                }}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Akut bakteriell meningit (ABM)</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
-                                onPress={() => scrollIntoView(footnoteRef.current, options)}
+                                onPress={() => {
+                                    scrollIntoView(footnoteRef.current, options);
+                                    toggleRedNavVisibility(!redNavVisible);
+                                }}
                                 >
                                     <Text style={{fontWeight: 'bold'}}>Footnotes</Text>
                                 </Pressable>
