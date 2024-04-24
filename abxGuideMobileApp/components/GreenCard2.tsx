@@ -272,7 +272,7 @@ function GreenCard2Content() {
                     </Text>
                     </View>
                 </View>
-                <View ref={firstSubsection4} style={styles.row}>
+                <View ref={firstSubsection4} style={[styles.row, {backgroundColor: 'white'}]}>
                     <Text style={styles.footnotes}>
                     <Text style={{fontWeight: 'bold'}}>Att tänka på vid urosepsis och febril UVI!</Text>
                     {"\n"}{"\n"}
@@ -785,7 +785,7 @@ function GreenCard2Content() {
                 </View>
                 </View>
 
-                <View ref={secondSubsection9} style={styles.row}>
+                <View ref={secondSubsection9} style={[styles.row, {backgroundColor: 'white'}]}>
                     <Text style={styles.footnotes}>
                     <Text style={{fontWeight: 'bold'}}>Att tänka på!</Text>
                     {"\n"}
