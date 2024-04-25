@@ -74,15 +74,15 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad</Text></Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
-                                +/- metronidazol 500mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
-                                {"\n"}
-                                {"\n"}
-                                b. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                +/- metronidazol 500mg x 3<Text style={styles.super}>8</Text>
                                 {"\n"}
                                 {"\n"}
-                                c. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
+                                {"\n"}
+                                {"\n"}
+                                c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 </Text>
                             </View>
                     </View>
@@ -91,11 +91,11 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Sjukhusförvärvad</Text>{"\n"}(={">"}48 tim efter ankomst till sjukhus)</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                b. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 </Text>
                             </View>
                     </View>
@@ -104,16 +104,16 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Neutropeni</Text> {"\n"}(neutrofila {"< 0,5"})</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2,3,4,5,6</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2,3,4,5,6</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. meropenem 1g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                b. meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                c. ceftazidim 2g x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                c. ceftazidim 2g x 3<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
-                                + klindamycin 600-(900)mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
+                                + klindamycin 600-(900)mg x 3<Text style={styles.super}>8</Text>
                                 </Text>
                             </View>
                     </View>
@@ -127,12 +127,12 @@ function RedCard2Content() {
                                 </Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                klindamycin 600-(900)mg x 3 <Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 6, 8</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                klindamycin 600-(900)mg x 3 <Text style={styles.super}>2, 3, 4, 5, 6, 8</Text>
                                 {"\n"}
-                                + ciprofloxacin 400mg x 2-3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                + ciprofloxacin 400mg x 2-3<Text style={styles.super}>9</Text>
                                 {"\n"}
-                                + aminoglykosid<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>3, 5</Text>
+                                + aminoglykosid<Text style={styles.super}>3, 5</Text>
                                 </Text>
                             </View>
                         </View>
@@ -145,21 +145,21 @@ function RedCard2Content() {
                                     </Text>
                                 </View>
                                 <View style={[styles.column, {backgroundColor: 'whitesmoke'}]}>
-                                    <Text style={styles.content}>
+                                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                                     {'\u25CF'} <Text style={{fontWeight: 'bold'}}>Urosepsis:</Text>
                                     {"\n"}
-                                    a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5 ,</Text>
+                                    a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5 ,</Text>
                                     {"\n"}
-                                    b. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                    b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                     {"\n"}
-                                    c. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                    c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                     {"\n"}
-                                    d. imipenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                    d. imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                     {"\n"}
                                     {"\n"}{'\u25CF'} <Text style={{fontWeight: 'bold'}}>Nekrotiserande hud- och mjukdels- infektion (myosit/fasciit):</Text> meropenem 1g
-                                    x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                    x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                     {"\n"}
-                                    + klindamycin 600-(900)mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
+                                    + klindamycin 600-(900)mg x 3<Text style={styles.super}>8</Text>
                                     {"\n"}
                                     + ev.i.v immunglobulin
                                     {"\n"}
@@ -190,11 +190,11 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad</Text></Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                b. meropenem 1gx3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
                                 {"\n"}
                                 +
@@ -206,7 +206,7 @@ function RedCard2Content() {
                                 eller
                                 {"\n"}
                                 {"\n"}
-                                moxifloxacin 400mgx1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text> alt. levofloxacin 750 mg x1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                moxifloxacin 400mgx1<Text style={styles.super}>9</Text> alt. levofloxacin 750 mg x1<Text style={styles.super}>9</Text>
                                 </Text>
                             </View>
                         </View>
@@ -215,19 +215,19 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Sjukhusförvärvad</Text>{"\n"}(={">"}48 tim efter ankomst till sjukhus)</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                b. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
                                 {"\n"}
                                 +
                                 {"\n"}
                                 {"\n"}
-                                ciprofloxacin 400mg x 2-3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text> alt.
+                                ciprofloxacin 400mg x 2-3<Text style={styles.super}>9</Text> alt.
                                 {"\n"}
-                                (om cipro-resistens) aminoglykosid<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>3, 5</Text>
+                                (om cipro-resistens) aminoglykosid<Text style={styles.super}>3, 5</Text>
                                 </Text>
                             </View>
                         </View>
@@ -236,18 +236,18 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Neutropeni</Text> {"\n"}(neutrofila {"< 0,5"})</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a.piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a.piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
                                 {"\n"}
-                                b.meropenem 1g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
+                                b.meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5</Text>
                                 {"\n"}
                                 {"\n"}
                                 +
                                 {"\n"}
-                                ciprofloxacin 400 mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text> (P. aeruginosa, Legionella spp, men ej mykoplasma) eller moxifloxacin 400mgx1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text> alt.
+                                ciprofloxacin 400 mg x 3<Text style={styles.super}>9</Text> (P. aeruginosa, Legionella spp, men ej mykoplasma) eller moxifloxacin 400mgx1<Text style={styles.super}>9</Text> alt.
                                 {"\n"}
-                                levofloxacin 750 mgx1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text> (Legionella spp, mykoplasma men ej P. aeruginosa)
+                                levofloxacin 750 mgx1<Text style={styles.super}>9</Text> (Legionella spp, mykoplasma men ej P. aeruginosa)
                                 </Text>
                             </View>
                         </View>
@@ -261,19 +261,19 @@ function RedCard2Content() {
                                 </Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. klindamycin 600-(900)mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 8</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. klindamycin 600-(900)mg x 3<Text style={styles.super}>2, 3, 4, 5, 8</Text>
                                 {"\n"}
-                                + moxifloxacin 400mg x 1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                + moxifloxacin 400mg x 1<Text style={styles.super}>9</Text>
                                 {"\n"}
-                                alt. levofloxacin 750mg x 1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text> (samhällsförvärvad)
+                                alt. levofloxacin 750mg x 1<Text style={styles.super}>9</Text> (samhällsförvärvad)
                                 {"\n"}
                                 {"\n"}
-                                b. klindamycin 600-(900)mg x 3 <Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 8</Text>
+                                b. klindamycin 600-(900)mg x 3 <Text style={styles.super}>2, 3, 4, 5, 8</Text>
                                 {"\n"}
-                                + ciprofloxacin 400mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                + ciprofloxacin 400mg x 3<Text style={styles.super}>9</Text>
                                 {"\n"}
-                                +/- aminoglykosid<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>3</Text> (sjukhusförvärvad/ misstanke om P. aeruginosa)
+                                +/- aminoglykosid<Text style={styles.super}>3</Text> (sjukhusförvärvad/ misstanke om P. aeruginosa)
                                 </Text>
                             </View>
                         </View>
@@ -286,12 +286,12 @@ function RedCard2Content() {
                                     </Text>
                                 </View>
                                 <View style={[styles.column, {backgroundColor: 'whitesmoke'}]}>
-                                    <Text style={styles.content}>
+                                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                                     {'\u25CF'} Legionella: utlandsresa, immunsuppression, kronisk lungsjukdom
                                     {"\n"}
                                     {"\n"}{'\u25CF'} Pneumocystis (P. jirovecii) och aspergillus hos immunsupprimerade
                                     {"\n"}
-                                    {"\n"}{'\u25CF'} Kombinationsbehandling högdosbetalaktam<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text> och ev. ciprofloxacin (400 mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>) vid misstanke om pseudomonas
+                                    {"\n"}{'\u25CF'} Kombinationsbehandling högdosbetalaktam<Text style={styles.super}>1</Text> och ev. ciprofloxacin (400 mg x 3<Text style={styles.super}>9</Text>) vid misstanke om pseudomonas
                                     {"\n"}
                                     {"\n"}{'\u25CF'} Tuberkulos hos äldre, immigranter, etyliker, immunsupprimerade, långdraget förlopp
                                     {"\n"}
@@ -325,14 +325,14 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad</Text></Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text> + metronidazol 500mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
+                                b. cefotaxim 2g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> + metronidazol 500mg x 3<Text style={styles.super}>8</Text>
                                 {"\n"}
                                 {"\n"}
-                                c. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text> alt. imipenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                c. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> alt. imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 </Text>
                             </View>
                         </View>
@@ -341,16 +341,16 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Sjukhusförvärvad</Text>{"\n"}(={">"}48 tim efter ankomst till sjukhus)</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. meropenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text> alt.
+                                b. meropenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> alt.
                                 {"\n"}
-                                imipenem 1g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                imipenem 1g x 3-4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                + echinocandin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>6, 8</Text> (misstanke om invasiv candida)
+                                + echinocandin<Text style={styles.super}>6, 8</Text> (misstanke om invasiv candida)
                                 </Text>
                             </View>
                         </View>
@@ -359,14 +359,14 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Neutropeni</Text> {"\n"}(neutrofila {"< 0,5"})</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. meropenem 1g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text> alt. imipenem 1g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. meropenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text> alt. imipenem 1g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                b. piperacillin-tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6</Text>
+                                b. piperacillin-tazobaktam 4g x 4<Text style={styles.super}>1, 2, 3, 4, 5, 6</Text>
                                 {"\n"}
                                 {"\n"}
-                                + echinocandin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>6, 8</Text> (misstanke om invasiv candida)
+                                + echinocandin<Text style={styles.super}>6, 8</Text> (misstanke om invasiv candida)
                                 </Text>
                             </View>
                         </View>
@@ -380,19 +380,19 @@ function RedCard2Content() {
                                 </Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                klindamycin 600-(900)mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 6, 8</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                klindamycin 600-(900)mg x 3<Text style={styles.super}>2, 3, 4, 5, 6, 8</Text>
                                 {"\n"}
-                                + ciprofloxacin 400mg x 2-3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                + ciprofloxacin 400mg x 2-3<Text style={styles.super}>9</Text>
                                 {"\n"}
-                                +/- aminoglykosid<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>3</Text> alt.
+                                +/- aminoglykosid<Text style={styles.super}>3</Text> alt.
                                 {"\n"}
-                                +/- tigecyklin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> 100 mg i laddn.dos följt av 50 mgx2 (infektionskonsult)
+                                +/- tigecyklin<Text style={styles.super}>8</Text> 100 mg i laddn.dos följt av 50 mgx2 (infektionskonsult)
                                 {"\n"}
                                 {"\n"}
                                 +
                                 {"\n"}
-                                echinocandin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>6, 8</Text> (vid misstanke om invasiv candida)
+                                echinocandin<Text style={styles.super}>6, 8</Text> (vid misstanke om invasiv candida)
                                 </Text>
                             </View>
                         </View>
@@ -405,11 +405,11 @@ function RedCard2Content() {
                                     </Text>
                                 </View>
                                 <View style={[styles.column, {backgroundColor: 'whitesmoke'}]}>
-                                    <Text style={styles.content}>
+                                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                                     {'\u25CF'} Tidig Source control: dränera abscess
                                     {"\n"}
                                     {"\n"}{'\u25CF'} Invasiv candida: långvarig IVA-vård, neutropeni, tarmperforation, kontinuerlig eller intermittent dialys,
-                                    caspofungin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>6, 8</Text> eller anidulafungin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>6</Text>
+                                    caspofungin<Text style={styles.super}>6, 8</Text> eller anidulafungin<Text style={styles.super}>6</Text>
                                     </Text>
                                 </View>
                         </View>
@@ -436,15 +436,15 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Samhällsförvärvad</Text></Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                a. cefotaxim 3g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 4, 5, 7</Text> + ampicillin 3g x 4
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                a. cefotaxim 3g x 4<Text style={styles.super}>1, 2, 4, 5, 7</Text> + ampicillin 3g x 4
                                 {"\n"}
                                 {"\n"}
-                                b. meropenem 2g x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 4, 5, 7</Text>
+                                b. meropenem 2g x 3<Text style={styles.super}>1, 2, 4, 5, 7</Text>
                                 {"\n"}
                                 Vid misstanke om infektion med pneumokocker med nedsatt känslighet för penicillin, t.ex. vid infektion förvärvad utomlands
                                 ge tillägg med något
-                                av följande tre alt: (i) vankomycin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2</Text> +/-rifampicin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>, (ii) linezolid eller (iii) moxifloxacin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                av följande tre alt: (i) vankomycin<Text style={styles.super}>2</Text> +/-rifampicin<Text style={styles.super}>8</Text>, (ii) linezolid eller (iii) moxifloxacin<Text style={styles.super}>9</Text>
                                 </Text>
                             </View>
                         </View>
@@ -453,10 +453,10 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Sjukhusförvärvad</Text>{"\n"}(={">"}48 tim efter ankomst till sjukhus)</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                meropenem 2g x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 5</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                meropenem 2g x 3<Text style={styles.super}>1, 5</Text>
                                 {"\n"}
-                                + vankomycin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2</Text> alt linezolid 600 mg x 2
+                                + vankomycin<Text style={styles.super}>2</Text> alt linezolid 600 mg x 2
                                 {"\n"}
                                 {"\n"}
                                 Ovanstående avser postoperativ och posttraumatisk meningit
@@ -468,8 +468,8 @@ function RedCard2Content() {
                                 <Text style={styles.content}><Text style={{fontWeight: 'bold'}}>Neutropeni</Text> {"\n"}(neutrofila {"< 0,5"})</Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                meropenem 2g x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 4, 5, 7</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                meropenem 2g x 3<Text style={styles.super}>1, 2, 4, 5, 7</Text>
                                 </Text>
                             </View>
                         </View>
@@ -483,11 +483,11 @@ function RedCard2Content() {
                                 </Text>
                             </View>
                             <View style={[styles.column, {backgroundColor: '#DCEAFF'}]}>
-                                <Text style={styles.content}>
-                                moxifloxacin 400mg x 1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>9</Text>
+                                <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
+                                moxifloxacin 400mg x 1<Text style={styles.super}>9</Text>
                                 {"\n"}
                                 {"\n"}
-                                + vankomycin<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2</Text>
+                                + vankomycin<Text style={styles.super}>2</Text>
                                 {"\n"}
                                 {"\n"}
                                 +/-
@@ -508,12 +508,12 @@ function RedCard2Content() {
                                     </Text>
                                 </View>
                                 <View style={[styles.column, {backgroundColor: 'whitesmoke'}]}>
-                                    <Text style={styles.content}>
+                                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                                     {'\u25CF'} Tbc-meningit hos immigranter, immunsupprimerade och ovaccinerade
                                     {"\n"}
                                     {"\n"}{'\u25CF'} Svampmeningit hos immunsupprimerade
                                     {"\n"}
-                                    {"\n"}{'\u25CF'} Herpesencephalit: förvirring. fokalsymtom, virusgenes (aciklovir 10mg/kg x 3)<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>7</Text>
+                                    {"\n"}{'\u25CF'} Herpesencephalit: förvirring. fokalsymtom, virusgenes (aciklovir 10mg/kg x 3)<Text style={styles.super}>7</Text>
                                     {"\n"}
                                     {"\n"}{'\u25CF'} Steroider vid samhällsförv. ABM (betametason 8mg x 4)
                                     {"\n"}
@@ -633,7 +633,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontWeight: 'bold'}}>Urosepsis & Myosit/Fasciit</Text>
+                                    <Text style={{fontStyle: 'italic'}}>Urosepsis & Myosit/Fasciit</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => {
