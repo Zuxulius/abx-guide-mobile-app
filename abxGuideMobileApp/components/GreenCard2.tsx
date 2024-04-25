@@ -145,7 +145,7 @@ function GreenCard2Content() {
                     </View>
                     <View style={styles.column}>
                         <View style={styles.rowHead}>
-                            <Text style={styles.title}>Alternativ<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text></Text>
+                            <Text style={styles.title} onPress={() => setFootnotesVisible(true)}>Alternativ<Text style={styles.super}>1</Text></Text>
                         </View>
                         <Text style={styles.content}>
                         c. meropenem 1gx 3-4: effekt på 99% av ESBL och > 95% av Enterobacterales, vanl god effekt på Pseudomonas aeruginosa, ej effekt på Enterococcus faecalis.
@@ -207,7 +207,7 @@ function GreenCard2Content() {
                     </View>
                     <View style={styles.column}>
                         <View style={styles.rowHead}>
-                            <Text style={styles.title}>Alternativ<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text></Text>
+                            <Text style={styles.title} onPress={() => setFootnotesVisible(true)}>Alternativ<Text style={styles.super}>1</Text></Text>
                         </View>
                         <Text style={styles.content}>
                         <Text style={{fontWeight: 'bold'}}>Poliklinisk handläggning:</Text>
@@ -257,7 +257,7 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.column}>
                     <View style={styles.rowHead}>
-                        <Text style={styles.title}>Alternativ<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1</Text></Text>
+                        <Text style={styles.title} onPress={() => setFootnotesVisible(true)}>Alternativ<Text style={styles.super}>1</Text></Text>
                     </View>
                     <Text style={styles.content}>
                     T. trimetoprim 160mg x 2
@@ -354,7 +354,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                     {"\n"}
                     b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
@@ -405,7 +405,7 @@ function GreenCard2Content() {
                         </Text>
                     </View>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                         a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5</Text>
                         {"\n"}
                         b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5</Text>
@@ -467,7 +467,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                     {"\n"}
                     b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
@@ -517,7 +517,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. erytromycin 1gx3 iv.
                     {"\n"}
                     b. azitromycin 500mgx1 iv.
@@ -532,7 +532,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                     {"\n"}
                     b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
@@ -579,7 +579,7 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.row}>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. moxifloxacin 400mgx1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                     {"\n"}
                     b. levofloxacin 750 mg x1<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
@@ -600,7 +600,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>.
                     {"\n"}
                     b. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
@@ -650,7 +650,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                     {"\n"}
                     b. meropenem 1gx3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
@@ -698,7 +698,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a.piperacillin/tazobaktam 4g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                     {"\n"}
                     b.meropenem 1g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
@@ -743,7 +743,7 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.row}>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. T. doxycyklin 200 mg x 1 i 3 dygn följt av 100 mg x 1
                     {"\n"}
                     b. T. erytromycin (prep./dos se
@@ -755,7 +755,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     a. moxifloxacin 400mgx1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
                     {"\n"}
                     b. levofloxacin 750 mg x1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>
@@ -768,7 +768,7 @@ function GreenCard2Content() {
                     </Text>
                 </View>
                 <View style={styles.column}>
-                    <Text style={styles.content}>
+                    <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                     klindamycin 600-(900)mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>2, 3, 4, 5, 7</Text>
                     {"\n"}
                     + moxifloxacin 400mg x 1 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text> alt.
@@ -793,7 +793,7 @@ function GreenCard2Content() {
                     {"\n"}
                     {'\u25CF'} Ornitos ( Chlamidophila psittaci) doxycyklin 200 mg x 1.
                     {"\n"}
-                    {'\u25CF'} Kinoloner<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>: moxifloxacin/levofloxacin/ciprofloxacin observera ej vid
+                    <Text onPress={() => setFootnotesVisible(true)}>{'\u25CF'} Kinoloner<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>8</Text>: moxifloxacin/levofloxacin/ciprofloxacin observera ej vid</Text>
                     {"\n"}
                     aortaaneurysm, övriga kontraindikationer - se FASS
                     {"\n"}
@@ -848,7 +848,7 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                             a. bensyl-pc 3g x 3-4
                             {"\n"}
                             b. T. penicillin V 1g x 3(-4)
@@ -864,7 +864,7 @@ function GreenCard2Content() {
                         </Text>
                     </View>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                             inf. klindamycin 600mg x 3 iv.<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4,7</Text>
                             {"\n"}
                             K. klindamycin 300mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4,7</Text>
@@ -903,14 +903,14 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                             a. inf. kloxacillin 2g x 4 iv.<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                             {"\n"}
                             b. T. flukloxacillin 1 g x 4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4</Text>
                         </Text>
                     </View>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                             a. inf. klindamycin 600mg x 3 iv.<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4, 7</Text>
                             {"\n"}
                             b. K. klindamycin 300mg x 3<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>4, 7</Text>
@@ -927,7 +927,7 @@ function GreenCard2Content() {
                 <View ref={thirdSubsection3} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <View>
                         <Text style={styles.title2}>
-                        <Text style={{fontWeight: 'bold'}}>Bukinfektion<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6, 7</Text></Text>
+                        <Text style={{fontWeight: 'bold'}} onPress={() => setFootnotesVisible(true)}>Bukinfektion<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5, 6, 7</Text></Text>
                         {"\n"}
                         {"\n"}
                         Tidig Source control - dränera abscess
@@ -951,7 +951,7 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                             a. piperacillin-tazobaktam 4g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,6,</Text>
                             {"\n"}
                             {"\n"}
@@ -990,7 +990,7 @@ function GreenCard2Content() {
                 </View>
                 <View ref={thirdSubsection4} style={[styles.row, {backgroundColor: '#AFFFBC'}]}>
                     <View>
-                        <Text style={styles.title2}>
+                        <Text style={styles.title2} onPress={() => setFootnotesVisible(true)}>
                         Svår samhällsförvärvad bakteriell infektion med oklart fokus hos patient som saknar samsjuklighet <Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1, 2, 3, 4, 5</Text>
                         {"\n"}
                         {"\n"}
@@ -1012,7 +1012,7 @@ function GreenCard2Content() {
                 </View>
                 <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.content}>
+                        <Text style={styles.content} onPress={() => setFootnotesVisible(true)}>
                             a. cefotaxim 2g x 3-4<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>1,2,3,4,5,</Text>
                             {"\n"}
                             +/- metronidazol 500mg x 3 iv<Text style={styles.super} onPress={() => setFootnotesVisible(true)}>7</Text>
