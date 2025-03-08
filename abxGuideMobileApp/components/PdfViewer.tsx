@@ -1,20 +1,25 @@
 import { View, Dimensions, StyleSheet, ScrollView, Text, } from 'react-native';
 import Pdf from 'react-native-pdf';
+import { Platform } from 'react-native';
 
 function PdfViewer({ route }) {
 
     const { pdfName } = route.params;
 
     let pdfSource;
+
     switch(pdfName) {
         case 'greenCard':
-            pdfSource = require('../assets/greenCard.pdf');
+            // pdfSource = Platform.OS === 'ios' ? require('../assets/greenCard.pdf') : { uri: 'bundle-assets://greenCard.pdf' };
+            pdfSource = { uri: 'bundle-assets://greenCard.pdf' };
             break;
         case 'redCard':
-            pdfSource = require('../assets/redCard.pdf');
+            // pdfSource = Platform.OS === 'ios' ? require('../assets/redCard.pdf') : { uri: 'bundle-assets://redCard.pdf' };
+            pdfSource = { uri: 'bundle-assets://redCard.pdf' };
             break;
         default:
-            pdfSource = require('../assets/redCard.pdf');
+            // pdfSource = Platform.OS === 'ios' ? require('../assets/redCard.pdf') : { uri: 'bundle-assets://redCard.pdf' };
+            pdfSource = { uri: 'bundle-assets://redCard.pdf' };
             break;
     }
 

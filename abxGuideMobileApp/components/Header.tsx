@@ -18,6 +18,7 @@ function Header() {
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
+        paddingTop: 50,
         justifyContent: 'center',
         alignItems: 'center'    },
     title: {

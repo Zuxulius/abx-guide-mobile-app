@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
         marginTop: 25,
     },
     container: {
+        paddingTop: 50,
         display: 'flex',
         alignItems: 'center',
     },

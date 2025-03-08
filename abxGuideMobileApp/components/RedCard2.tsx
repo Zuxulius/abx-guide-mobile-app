@@ -608,7 +608,7 @@ function RedCard2Content() {
                         </ScrollView>
                     </Modal>
                     <Modal
-                    style={{width: '50%', backgroundColor: 'whitesmoke', marginLeft: '45%'}}
+                    style={{width: '50%', backgroundColor: 'whitesmoke', marginLeft: '45%', marginTop: '20%', marginBottom: '10%'}}
                     backdropOpacity={0.4}
                     animationIn={'slideInRight'}
                     animationOut={'slideOutRight'}
@@ -678,6 +678,8 @@ function RedCard2Content() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      paddingTop: 50,
+      paddingBottom: 50,
     },
     header: {
         borderTopWidth: 1,

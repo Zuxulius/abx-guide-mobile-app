@@ -2,6 +2,14 @@ apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 
+// Explicitly disable Hermes for Android
+project.ext.react = [
+    enableHermes: false,  // Disable Hermes
+    // (Optional) if you are not using the New Architecture, you can also explicitly disable it:
+    newArchEnabled: false
+]
+def hermesEnabled = project.ext.react["enableHermes"] ?: false
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -70,6 +78,16 @@ def enableProguardInReleaseBuilds = false
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
+
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libjsc.so'
+        pickFirst 'lib/arm64-v8a/libjsc.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+    }
+
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
@@ -90,12 +108,12 @@ android {
             keyPassword 'android'
         }
         // Added for test release, from here
-        release {
-            storeFile file(MYAPP_UPLOAD_STORE_FILE)
-            storePassword MYAPP_UPLOAD_STORE_PASSWORD
-            keyAlias MYAPP_UPLOAD_KEY_ALIAS
-            keyPassword MYAPP_UPLOAD_KEY_PASSWORD
-        }
+        // release {
+            // storeFile file(MYAPP_UPLOAD_STORE_FILE)
+            // storePassword MYAPP_UPLOAD_STORE_PASSWORD
+            // keyAlias MYAPP_UPLOAD_KEY_ALIAS
+            // keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+        // }
         // To here
     }
     buildTypes {
@@ -105,11 +123,11 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            // signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             // added for test release
-            //signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug // Replace with release
         }
     }
 }

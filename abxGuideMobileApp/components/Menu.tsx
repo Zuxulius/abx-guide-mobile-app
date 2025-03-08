@@ -115,6 +115,7 @@ const styles = StyleSheet.create ({
         width: '40%',
         height: '100%',
         position: 'absolute',
+        paddingTop: 50,
     },
     menuItems: {
         display: 'flex',

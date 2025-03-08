@@ -67,11 +67,13 @@ const styles = StyleSheet.create ({
     checklist: {
         zIndex: 1001,
         padding: 10,
+        marginBottom: 50,
         width: '100%',
         height: '100%',
         backgroundColor: 'rgba(230,229,255,0.32)'
     },
     header: {
+        paddingTop: 50,
         flexDirection: 'row',
         justifyContent: 'center',
     },

@@ -47,9 +47,10 @@ const styles = StyleSheet.create({
         bottom: 0,
         width: '100%',
         zIndex: 1000,
+        paddingBottom: 20,
     },
     navItems: {
-        borderWidth: 0.3,
+        borderWidth: 0.2,
         padding: 10,
         width: '50%',
     },

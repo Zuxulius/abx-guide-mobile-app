@@ -74,6 +74,7 @@ function Allergy({ allergyVisible, setAllergyVisible }) {
 const styles = StyleSheet.create ({
     allergy: {
         padding: 10,
+        marginBottom: 50,
         width: '100%',
         height: '100%',
         backgroundColor: 'rgba(230,229,255,0.32)',
@@ -95,6 +96,7 @@ const styles = StyleSheet.create ({
         marginTop: 10,
     },
     header: {
+        paddingTop: 50,
         flexDirection: 'row',
         justifyContent: 'center',
     },
