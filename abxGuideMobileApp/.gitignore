@@ -92,4 +92,5 @@ android/captures/
 # -------------------------
 # IDE / Editor Settings
 # -------------------------
-.vscode/
+.vscode/android/app/debug.keystore
+.bundle/
