@@ -625,7 +625,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontWeight: 'bold'}}>Sepsis med okänt fokus</Text>
+                                    <Text style={{fontWeight: 'bold', color: 'black'}}>Sepsis med okänt fokus</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => {
@@ -633,7 +633,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontStyle: 'italic'}}>Urosepsis & Myosit/Fasciit</Text>
+                                    <Text style={{fontStyle: 'italic', color: 'black'}}>Urosepsis & Myosit/Fasciit</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => {
@@ -641,7 +641,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontWeight: 'bold'}}>Pneumoni</Text>
+                                    <Text style={{fontWeight: 'bold', color: 'black'}}>Pneumoni</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => {
@@ -649,7 +649,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontWeight: 'bold'}}>Bukinfektion</Text>
+                                    <Text style={{fontWeight: 'bold', color: 'black'}}>Bukinfektion</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => {
@@ -657,7 +657,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontWeight: 'bold'}}>Akut bakteriell meningit (ABM)</Text>
+                                    <Text style={{fontWeight: 'bold', color: 'black'}}>Akut bakteriell meningit (ABM)</Text>
                                 </Pressable>
                                 <Pressable style={styles.navScrollButton}
                                 onPress={() => {
@@ -665,7 +665,7 @@ function RedCard2Content() {
                                     toggleRedNavVisibility(!redNavVisible);
                                 }}
                                 >
-                                    <Text style={{fontWeight: 'bold'}}>Footnotes</Text>
+                                    <Text style={{fontWeight: 'bold', color: 'black'}}>Footnotes</Text>
                                 </Pressable>
                             </View>
                         </ScrollView>
